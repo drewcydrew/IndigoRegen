@@ -40,7 +40,7 @@ function App() {
             handleTabChange('guide')
           }}
         >
-          View User Guide
+          View Link
         </button>
       </div>
     )
@@ -61,14 +61,14 @@ function App() {
               className={`tab-button ${activeTab === 'guide' ? 'active' : ''}`}
               onClick={() => handleTabChange('guide')}
             >
-              User Guide
+              Links
             </button>
           </div>
         </div>
 
         <div className="modal-header">
           <h1 className="modal-title">
-            {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen User Guide'}
+            {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen Links'}
           </h1>
         </div>
 
