@@ -69,7 +69,7 @@ function App() {
         <div className="modal-header">
           <div className="modal-header-content">
             <img 
-              src="/library-icon.png" 
+              src="/library-icon.jpg" 
               alt="Indigo Regen Logo" 
               className="modal-logo"
             />
