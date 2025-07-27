@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   IoLeafOutline, 
   IoGlobeOutline, 
@@ -9,8 +9,10 @@ import {
   IoCalendarOutline,
   IoHeartOutline,
   IoBookOutline,
-  IoShareSocialOutline
+  IoShareSocialOutline,
+  IoCarOutline
 } from 'react-icons/io5';
+import CoolSeats from './CoolSeats';
 
 const QuickLinkCard = ({ icon: Icon, title, description, link, color, onClick }) => {
   const handleClick = () => {
@@ -78,6 +80,8 @@ const QuickLinkCard = ({ icon: Icon, title, description, link, color, onClick })
 };
 
 function UserGuide() {
+  const [activeSection, setActiveSection] = useState('quicklinks');
+
   const quickLinks = [
     {
       icon: IoLeafOutline,
@@ -129,6 +133,13 @@ function UserGuide() {
       onClick: () => window.open('mailto:learning@indigoregen.com.au?subject=Learning Resources', '_blank')
     },
     {
+      icon: IoCarOutline,
+      title: 'Cool Seats',
+      description: 'Learn about our innovative composting benches that combine community seating with sustainable waste management.',
+      color: '#9333EA',
+      onClick: () => setActiveSection('coolseats')
+    },
+    {
       icon: IoGlobeOutline,
       title: 'Climate Action',
       description: 'Join our efforts in emissions reduction, climate resilience, and supporting the plant-based treaty.',
@@ -137,7 +148,7 @@ function UserGuide() {
     }
   ];
 
-  return (
+  const QuickLinksPage = () => (
     <div className="quick-links-container" style={{ 
       padding: '2rem 0',
       maxWidth: '1200px',
@@ -253,6 +264,45 @@ function UserGuide() {
           We typically respond within 24-48 hours. All inquiries welcome!
         </p>
       </div>
+    </div>
+  );
+
+  const CoolSeatsPageWithBackButton = () => (
+    <div>
+      <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
+        <button
+          onClick={() => setActiveSection('quicklinks')}
+          style={{
+            background: 'transparent',
+            color: '#7C3AED',
+            border: '2px solid #7C3AED',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '1rem',
+            fontWeight: '500',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = '#7C3AED';
+            e.target.style.color = '#E8D5FF';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'transparent';
+            e.target.style.color = '#7C3AED';
+          }}
+        >
+          ← Back to Quick Links
+        </button>
+      </div>
+      <CoolSeats />
+    </div>
+  );
+
+  return (
+    <div>
+      {/* Content */}
+      {activeSection === 'quicklinks' ? <QuickLinksPage /> : <CoolSeatsPageWithBackButton />}
     </div>
   );
 }
