@@ -1,42 +1,42 @@
 import { useState, useEffect } from 'react'
-import PrivacyPolicy from './components/PrivacyPolicy'
+import MissionStatement from './components/MissionStatement'
 import UserGuide from './components/UserGuide'
 import './App.css'
 
 function App() {
-  const [accepted, setAccepted] = useState(false)
-  const [activeTab, setActiveTab] = useState('privacy')
+  const [missionAccepted, setMissionAccepted] = useState(false)
+  const [activeTab, setActiveTab] = useState('mission')
   
   useEffect(() => {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab === 'user-guide' || tab === 'privacy') {
-      setActiveTab(tab === 'user-guide' ? 'guide' : 'privacy')
+    if (tab === 'user-guide' || tab === 'mission') {
+      setActiveTab(tab === 'user-guide' ? 'guide' : 'mission')
     }
   }, [])
 
   const handleAccept = () => {
-    setAccepted(true)
+    setMissionAccepted(true)
   }
 
   const handleTabChange = (tab) => {
     setActiveTab(tab)
     // Update URL parameter
     const url = new URL(window.location)
-    url.searchParams.set('tab', tab === 'guide' ? 'user-guide' : 'privacy')
+    url.searchParams.set('tab', tab === 'guide' ? 'user-guide' : 'mission')
     window.history.pushState({}, '', url)
   }
 
-  if (accepted) {
+  if (missionAccepted) {
     return (
       <div className="accepted-container">
         <h1>Thank you!</h1>
-        <p>You have accepted the privacy policy.</p>
+        <p>You have joined our mission for regenerative agriculture.</p>
         <button 
           className="tab-button" 
           onClick={() => {
-            setAccepted(false)
+            setMissionAccepted(false)
             handleTabChange('guide')
           }}
         >
@@ -48,14 +48,14 @@ function App() {
 
   return (
     <div className="app-container">
-      <div className="privacy-container">
+      <div className="mission-container">
         <div className="tab-header">
           <div className="tab-buttons">
             <button 
-              className={`tab-button ${activeTab === 'privacy' ? 'active' : ''}`}
-              onClick={() => handleTabChange('privacy')}
+              className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
+              onClick={() => handleTabChange('mission')}
             >
-              Privacy Policy
+              Our Mission
             </button>
             <button 
               className={`tab-button ${activeTab === 'guide' ? 'active' : ''}`}
@@ -68,14 +68,14 @@ function App() {
 
         <div className="modal-header">
           <h1 className="modal-title">
-            {activeTab === 'privacy' ? 'Privacy Policy' : 'Indigo Regen User Guide'}
+            {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen User Guide'}
           </h1>
         </div>
 
         <div className="scroll-content">
           <div className="content-container">
-            {activeTab === 'privacy' ? (
-              <PrivacyPolicy onAccept={handleAccept} />
+            {activeTab === 'mission' ? (
+              <MissionStatement onAccept={handleAccept} />
             ) : (
               <UserGuide />
             )}
@@ -86,4 +86,4 @@ function App() {
   )
 }
 
-export default App;
+export default App
