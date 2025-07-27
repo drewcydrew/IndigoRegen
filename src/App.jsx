@@ -67,9 +67,16 @@ function App() {
         </div>
 
         <div className="modal-header">
-          <h1 className="modal-title">
-            {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen Links'}
-          </h1>
+          <div className="modal-header-content">
+            <img 
+              src="/library-icon.png" 
+              alt="Indigo Regen Logo" 
+              className="modal-logo"
+            />
+            <h1 className="modal-title">
+              {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen Links'}
+            </h1>
+          </div>
         </div>
 
         <div className="scroll-content">

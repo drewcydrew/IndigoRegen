@@ -4,6 +4,7 @@ function PrivacyPolicy({ onAccept }) {
       <p className="last-updated">Effective Date: April 17, 2025</p>
 
       <p className="introduction">
+
         Thank you for using Indigo Regen. Your privacy is important to us. This
         Privacy Policy outlines how your data is handled when you use our app.
       </p>

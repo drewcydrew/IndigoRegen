@@ -76,11 +76,30 @@
   background-color: #1E1B4B;
 }
 
+.modal-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.modal-logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 12px;
+  border: 2px solid #E8D5FF;
+  padding: 0.5rem;
+  background-color: rgba(232, 213, 255, 0.1);
+}
+
 .modal-title {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 700;
   color: #E8D5FF;
+  text-align: center;
 }
 
 .scroll-content {
@@ -335,6 +354,20 @@
   
   .modal-header {
     padding: 2rem 1rem 1rem;
+  }
+
+  .modal-header-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .modal-logo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .modal-title {
+    font-size: 2rem;
   }
   
   .section-with-video {
