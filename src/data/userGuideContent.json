@@ -3,25 +3,25 @@
     "title": "Introduction",
     "sections": [
       {
-        "content": "Collection Paradise is a collection management tool that helps library workers make informed decisions about weeding, promotion, and item transfers through comprehensive statistical analysis."
+        "content": "Indigo Regen is a regenerative agriculture management tool that helps farmers and land managers make informed decisions about soil health, carbon sequestration, and sustainable farming practices through comprehensive data analysis."
       },
       {
         "subheading": "Our Vision",
-        "content": ["We've expanded the traditional concept of weeding into a complete garden metaphor that encourages library workers to view their collections as living spaces requiring continuous care and cultivation. Just as the ancient Persian paradise gardens created ordered microcosms of knowledge and beauty, modern public libraries serve as curated spaces for community reflection and discovery.",
-    "Collection Paradise provides analysis tools that work at every scale—from your entire collection down to individual items—while also supporting display management and digital promotion across multiple channels."]
+        "content": ["We've expanded the traditional concept of agriculture into a complete regenerative ecosystem that encourages farmers to view their land as living spaces requiring continuous care and cultivation. Just as ancient agricultural systems created sustainable microcosms of productivity and biodiversity, modern regenerative farming serves as curated spaces for environmental restoration and discovery.",
+    "Indigo Regen provides analysis tools that work at every scale—from your entire farm down to individual plots—while also supporting project management and sustainability reporting across multiple channels."]
       },
       { 
         "subheading": "Key Terms",
         "content": [
-          "<strong>Crop:</strong> A filtered list of collection items. You build crops on the 'Cultivate' screen by selecting your branch and collection type, then applying additional filters to generate your targeted item list. Manual crops can also be created on the Harvest screen by adding books by scanning barcodes or searching the database.",
-          "<strong>Cultivate:</strong> The screen where you create crops by filtering items based on your specific criteria.",
-          "<strong>Harvest:</strong> The page where you work with your crops—either pulling items for weeding, transfer, or display purposes, or generating promotional graphics for your website and social media channels.",
-          "<strong>Garden:</strong> Where your crops are stored, these are further grouped by category - 'weeding', 'transfer', 'to action' and 'complete'"
+          "<strong>Project:</strong> A filtered list of land management activities. You build projects on the 'Plan' screen by selecting your farm and land type, then applying additional filters to generate your targeted activity list. Manual projects can also be created on the Implement screen by adding activities through data entry or field monitoring.",
+          "<strong>Plan:</strong> The screen where you create projects by filtering activities based on your specific criteria.",
+          "<strong>Implement:</strong> The page where you work with your projects—either executing activities for soil improvement, carbon capture, or biodiversity enhancement, or generating sustainability reports for certification and stakeholder communication.",
+          "<strong>Portfolio:</strong> Where your projects are stored, these are further grouped by category - 'planning', 'active', 'monitoring' and 'complete'"
         ]
       },
       {
         "subheading": "Getting Started",
-        "content": "Begin by navigating to the Garden screen to view previously saved work or to Cultivate screen to create your first crop, then once your crop is saved, move to Harvest to put your curated collection to work. If you need inspiration, start with an overview of your collection on the Analyze screen."
+        "content": "Begin by navigating to the Portfolio screen to view previously saved work or to Plan screen to create your first project, then once your project is saved, move to Implement to put your regenerative practices to work. If you need inspiration, start with an overview of your land on the Analyze screen."
       }
     ]
   },
@@ -29,30 +29,29 @@
     "title": "Analyze",
     "sections": [
       {
-        "subheading": "Library Collection Selection",
+        "subheading": "Farm Selection",
         "content": [
-          "The Analyse screen allows you to visualize a subset of your collection using a variety of charts and statistics.",
-          "You can select a library and a collection (or collection group) using the dropdowns at the top of the screen. The current number of available and on-loan items is displayed beneath the selection panel.",
+          "The Analyse screen allows you to visualize a subset of your farm using a variety of charts and statistics.",
+          "You can select a farm and a land type using the dropdowns at the top of the screen. The current number of available and active projects is displayed beneath the selection panel.",
           "Selections are remembered between sessions, and default settings are loaded automatically unless overridden."
         ],
         "media": {
-          "src": "/media/library-collection-selector.png",
-          "title": "Library / Collection Selector",
+          "src": "/media/farm-selector.png",
+          "title": "Farm / Land Type Selector",
           "type": "image"
         }
       },
       {
         "subheading": "Chart Data Categories",
         "content": [
-          "Chart data is generated based on your selected library and collection. Metrics are grouped and displayed in a series of chart panels. These include:",
-          "<strong>Library</strong> – Distribution of items among libraries",
-          "<strong>Collection</strong> – Distribution of items among collections",
-          "<strong>Collection Group</strong> – Collections rolled into higher-level groupings (e.g. Junior, Adult)",
-          "<strong>Status</strong> – Shows ON LOAN, AVAILABLE, MISSING, and ASSUMED LOST item totals",
-          "<strong>Age</strong> – Categorizes items based on age (years since creation)",
-          "<strong>Inactivity</strong> – Categorizes items by time since last activity",
-          "<strong>Circulation</strong> – Groups items based on total checkouts",
-          "You can switch between viewing total items, total checkouts, total price, or calculated metrics such as average price per item or price per checkout."
+          "Chart data is generated based on your selected farm and land type. Metrics are grouped and displayed in a series of chart panels. These include:",
+          "<strong>Farm</strong> – Distribution of projects among farms",
+          "<strong>Land Type</strong> – Distribution of projects among different land types",
+          "<strong>Status</strong> – Shows ACTIVE, COMPLETED, ON HOLD, and CANCELLED project totals",
+          "<strong>Age</strong> – Categorizes projects based on age (years since initiation)",
+          "<strong>Activity Level</strong> – Categorizes projects by intensity of activities",
+          "<strong>Outcome</strong> – Groups projects based on total carbon sequestered or other outcomes",
+          "You can switch between viewing total projects, total outcomes, total area, or calculated metrics such as average outcome per project or area per outcome."
         ],
          "media": {
           "src": "/media/chart-data.png",
@@ -63,13 +62,13 @@
       {
         "subheading": "Viewing Chart Data",
         "content": [
-          "Each chart panel includes toggles to control which item statuses are included in the data:",
-          "Available",
-          "On Loan",
-          "Missing",
-          "Assumed Lost",
-          "Charts are interactive—tapping or clicking on a chart segment reveals a tooltip with detailed statistics, including checkout count, price, turnover, and date ranges.",
-          "You can also toggle individual categories on or off via the legend, allowing you to focus on specific parts of your collection."
+          "Each chart panel includes toggles to control which project statuses are included in the data:",
+          "Active",
+          "Completed",
+          "On Hold",
+          "Cancelled",
+          "Charts are interactive—tapping or clicking on a chart segment reveals a tooltip with detailed statistics, including project count, area, outcome, and date ranges.",
+          "You can also toggle individual categories on or off via the legend, allowing you to focus on specific parts of your farm."
         ],
          "media": {
           "src": "/media/chart-displays.png",
@@ -81,12 +80,12 @@
          "subheading": "Chart Types",
         "content": [
           "The following chart types are available for each category:",
-          "Pie Chart – Visualizes the share of categories (e.g. collection types, item ages)",
-          "Bar Chart – Displays item count or checkouts as horizontal bars",
-          "Stacked Chart – Stacked bar chart showing included and excluded items",
-          "Scatter Plot – Plots category checkouts against total item count",
-          "Gantt (Activity) – Shows category durations based on item age or activity",
-          "Checkouts Bar Chart – Sorts categories by checkout volume for comparison",
+          "Pie Chart – Visualizes the share of categories (e.g. land types, project ages)",
+          "Bar Chart – Displays project count or outcomes as horizontal bars",
+          "Stacked Chart – Stacked bar chart showing included and excluded projects",
+          "Scatter Plot – Plots category outcomes against total project count",
+          "Gantt (Activity) – Shows category durations based on project age or activity level",
+          "Outcomes Bar Chart – Sorts categories by outcome volume for comparison",
           "Use the chart view toggle to switch between these options. Tooltips and axis labels will update accordingly."
         ],
         "media": {
@@ -101,54 +100,53 @@
     "title": "Cultivate",
     "sections": [
       {
-        "content": "The cultivate screen offers the same visualisation functionality as the Analyze screen but adds filtering and subsetting tools to identify and save a \"crop\" — a subset of items from the selected collection based on specified criteria."
+        "content": "The cultivate screen offers the same visualisation functionality as the Analyze screen but adds filtering and subsetting tools to identify and save a \"project\" — a subset of land management activities from the selected farm based on specified criteria."
       },
       {
-        "subheading": "Library Collection Selection",
-        "content": "These controls work the same as on the Analyze page. Select a library and/or collection to filter and analyze a specific group. You can also select grouped collections if configured."
+        "subheading": "Farm Selection",
+        "content": "These controls work the same as on the Analyze page. Select a farm and/or land type to filter and analyze a specific group. You can also select grouped land types if configured."
       },
       {
         "subheading": "Filter Mode",
         "content": "Use the following panels to select a mode and configure filters specific to the chosen type. Each mode supports different search parameters."
       },
       {
-        "subheading": "Weeding",
+        "subheading": "Soil Health Improvement",
         "content": [
-          "Select a weeding type and use the slider to define a threshold. The following filter types are supported:",
-          "<strong>Grubby</strong> – Items with more than X checkouts (high usage).",
-          "<strong>Dead</strong> – Items not borrowed in the last X months (inactive).",
-          "<strong>Too Old</strong> – Items published more than X years ago.",
-          "<strong>DOA (Dead on Arrival)</strong> – Items published more than X years ago and never checked out.",
-          "Statistics such as age, inactivity, and checkout distributions are displayed to assist in selecting appropriate thresholds."
+          "Select a soil health improvement type and use the slider to define a threshold. The following filter types are supported:",
+          "<strong>High Carbon</strong> – Projects with more than X tons of carbon sequestered.",
+          "<strong>Low pH</strong> – Projects targeting soil acidification with lime or other amendments.",
+          "<strong>Nutrient Deficient</strong> – Projects aimed at correcting nutrient imbalances.",
+          "Statistics such as soil health metrics, project duration, and outcome distributions are displayed to assist in selecting appropriate thresholds."
         ]
       },
       {
         "subheading": "Find",
         "content": [
-          "Search for items based on their status and inactivity:",
-          "<strong>Missing</strong> – Items marked as missing.",
-          "<strong>Claimed Returned</strong> – Items claimed returned by patrons.",
-          "<strong>In Transit</strong> – Items currently in transit between locations.",
-          "Use the inactivity slider to specify the minimum number of weeks since last checkout. You can select multiple statuses at once."
+          "Search for projects based on their status and activity level:",
+          "<strong>Active</strong> – Projects currently being implemented.",
+          "<strong>On Hold</strong> – Projects temporarily paused.",
+          "<strong>Cancelled</strong> – Projects that were cancelled before completion.",
+          "Use the activity level slider to specify the minimum intensity of activities. You can select multiple statuses at once."
         ]
       },
       {
         "subheading": "Transfer",
         "content": [
           "Set three filter sliders to define a complex query:",
-          "Items older than X years",
-          "Items with more than Y checkouts",
-          "Items not checked out in the last Z months",
-          "Only items meeting all three criteria will be included in results."
+          "Projects older than X years",
+          "Projects with more than Y tons of carbon sequestered",
+          "Projects not active in the last Z months",
+          "Only projects meeting all three criteria will be included in results."
         ]
       },
       {
         "subheading": "Charts",
-        "content": "Chart data for the selected filter is displayed similarly to the Analyze screen. You can toggle the Show Excluded option to view results both with and without non-matching items. Charts may include category breakdowns, collection groupings, and financial statistics such as average price and turnover."
+        "content": "Chart data for the selected filter is displayed similarly to the Analyze screen. You can toggle the Show Excluded option to view results both with and without non-matching projects. Charts may include category breakdowns, land type groupings, and financial statistics such as cost per ton of carbon sequestered."
       },
       {
         "subheading": "Results",
-        "content": "Items matching the cultivation search are listed in the results panel. You can save these items as a crop, which will appear in the Harvest screen. Each crop can be reviewed, exported, or deleted as needed.",
+        "content": "Projects matching the cultivation search are listed in the results panel. You can save these projects, which will appear in the Implement screen. Each project can be reviewed, exported, or deleted as needed.",
         "media": {
           "src": "/media/cultivate-demo.mov",
           "title": "Cultivate",
@@ -157,130 +155,130 @@
       }
     ]
   },
-  "harvest": {
-    "title": "Harvest",
+  "implement": {
+    "title": "Implement",
     "sections": [
       {
-        "content": "Use the Harvest screen to manage existing crops."
+        "content": "Use the Implement screen to manage existing projects."
       },
       {
         "subheading": "Header",
-        "content": "The Harvest screen allows you to view and refine a selected crop. Crops may be viewed as a list, gallery, or via charts, and refined through filters, selection tools, and sublists."
+        "content": "The Implement screen allows you to view and refine a selected project. Projects may be viewed as a list, gallery, or via charts, and refined through filters, selection tools, and sublists."
       },
       {
-        "subheading": "ISBN Lookup",
-        "content": "Use ISBN Lookup to fetch metadata and cover images from the Google Books API. If a match is found, the book's title, author, and description will be auto-filled, and the cover image updated accordingly."
+        "subheading": "Metadata Lookup",
+        "content": "Use Metadata Lookup to fetch project metadata from external databases. If a match is found, the project's details will be auto-filled."
       },
       {
         "subheading": "Filter",
-        "content": "Use filter to search within the current crop by title, author, or status. Results update in real-time and can help you isolate books for removal or sublisting."
+        "content": "Use filter to search within the current project by activity type, status, or outcome. Results update in real-time and can help you isolate activities for adjustment or reporting."
       },
       {
         "subheading": "Display",
         "content": [
-          "Crops can be visualized in several modes:",
-          "<strong>Charts</strong> – Includes tabs for Activity (checkout trends), Distribution (status breakdown), and Checkouts (volume per category).",
-          "<strong>List</strong> – Shows book metadata, checkout history, and status (Found, Missing, Unknown). Items can be selected or edited directly from the list.",
-          "<strong>Gallery</strong> – Displays cover images in a responsive grid. Each item includes quick-access actions to update status or open the detail view.",
+          "Projects can be visualized in several modes:",
+          "<strong>Charts</strong> – Includes tabs for Activity (implementation trends), Distribution (status breakdown), and Outcomes (volume per category).",
+          "<strong>List</strong> – Shows project metadata, activity details, and status (Active, On Hold, Cancelled). Items can be selected or edited directly from the list.",
+          "<strong>Gallery</strong> – Displays project-related images or documents in a responsive grid. Each item includes quick-access actions to update status or open the detail view.",
           "You can toggle between views using the mode selector at the top of the screen."
         ]
       },
       {
-        "subheading": "Create Sublist",
+        "subheading": "Create Subproject",
         "content": [
-          "To generate a sublist, or \"crop\":",
-          "1. Select items using checkboxes or tap Select All.",
-          "2. Tap Generate Sublist.",
-          "3. Enter a name for the new crop.",
-          "The new crop will be saved locally and become immediately available for review."
+          "To generate a subproject:",
+          "1. Select activities using checkboxes or tap Select All.",
+          "2. Tap Generate Subproject.",
+          "3. Enter a name for the new project.",
+          "The new project will be saved locally and become immediately available for review."
         ],
         "media": {
-          "src": "/media/harvest-demo.mov",
-          "title": "Harvest",
+          "src": "/media/implement-demo.mov",
+          "title": "Implement",
           "type": "video"
         }
       },
       {
-        "subheading": "Manual Book Search",
+        "subheading": "Manual Activity Entry",
         "content": [
-          "After creating a crop, additional books can be added manually:",
-          "1. Select the target library and collection group",
-          "2. Enter author and/or title keywords",
-          "3. Browse results and select books to add to the crop",
-          "Use the Approve button to confirm additions."
+          "After creating a project, additional activities can be added manually:",
+          "1. Select the target farm and land type",
+          "2. Enter activity details and expected outcomes",
+          "3. Save activities to add them to the project",
+          "Manual entries can be used to specify custom or one-time activities not covered by standard practices."
         ],
         "media": {
           "src": "/media/manual-demo.mov",
-          "title": "Manual Book Addition",
+          "title": "Manual Activity Entry",
           "type": "video"
         }
       },
       {
         "subheading": "Scanner",
         "content": [
-          "To add books via barcode:",
+          "To add activities via barcode:",
           "1. Tap the Scanner button",
           "2. Scan one or more barcodes",
-          "3. Review matched books",
-          "4. Tap Approve to add them to the current crop",
-          "Scanned items are matched by ISBN where possible and may fetch data via Google Books."
+          "3. Review matched activities",
+          "4. Tap Approve to add them to the current project",
+          "Scanned items are matched by project ID where possible and may fetch data from external databases."
         ]
       },
       {
-        "subheading": "Generate Cover Image",
+        "subheading": "Generate Report",
         "content": [
-          "You can assign a crop image in two ways:",
-          "<strong>Upload from device</strong> – Select an image from your photo library or file browser",
-          "<strong>Generate collage</strong> – Choose up to 24 book covers from the crop to generate a branded image preview",
-          "Generated covers can be reviewed and re-generated as needed."
+          "You can generate a report for a project in two ways:",
+          "<strong>Standard Report</strong> – Generates a report with default settings and content.",
+          "<strong>Custom Report</strong> – Allows selection of specific data, charts, and layout options.",
+          "Reports can be previewed, saved as PDF, or printed directly from the app."
         ]
       }
     ]
   },
-  "gardens": {
-    "title": "Gardens",
+  "portfolio": {
+    "title": "Portfolio",
     "sections": [
       {
-        "content": "Use the Garden screen to manage and organize your collections of crops."
+        "content": "Use the Portfolio screen to manage and organize your collections of projects."
       },
       {
-        "subheading": "Crops",
-        "content": "Crops for the selected garden are grouped and displayed by source. Each group can be expanded to view the contained crops. Tap a crop to access additional actions such as rename, export, share, or delete."
+        "subheading": "Projects",
+        "content": "Projects for the selected portfolio are grouped and displayed by source. Each group can be expanded to view the contained projects. Tap a project to access additional actions such as rename, export, share, or delete."
       },
       {
-        "subheading": "Export Crop",
-        "content": "Tap a crop, then choose \"Export\" to preview and export it in .txt, .csv, or .html format."
+        "subheading": "Export Project",
+        "content": "Tap a project, then choose \"Export\" to preview and export it in .txt, .csv, or .html format."
       },
       {
-        "subheading": "Create Manual Crop",
-        "content": "Tap \"Create Manual Crop\" to begin a new empty crop. You'll be redirected to the Harvest screen where you can add books via search or scanner."
+        "subheading": "Create Manual Project",
+        "content": "Tap \"Create Manual Project\" to begin a new empty project. You'll be redirected to the Implement screen where you can add activities via manual entry or scanner."
       },
       {
-        "subheading": "Share Crop",
-        "content": "Tap a crop, then choose \"Share\" to move or copy it to another garden. You can select the target garden and choose the mode (copy or move)."
+        "subheading": "Share Project",
+        "content": "Tap a project, then choose \"Share\" to move or copy it to another portfolio. You can select the target portfolio and choose the mode (copy or move)."
       },
       {
-        "subheading": "Rename Crop",
-        "content": "Tap a crop, then choose \"Rename\" to update its name. You'll be prompted to enter the new crop name."
+        "subheading": "Rename Project",
+        "content": "Tap a project, then choose \"Rename\" to update its name. You'll be prompted to enter the new project name."
       },
       {
-        "subheading": "Rename Garden",
-        "content": "Tap the pencil icon in the header to rename the current garden. Edits apply immediately after confirmation."
+        "subheading": "Rename Portfolio",
+        "content": "Tap the pencil icon in the header to rename the current portfolio. Edits apply immediately after confirmation."
       },
       {
-        "subheading": "Change Garden",
-        "content": "Tap \"Change\" to select a different garden from the list or create a new one."
+        "subheading": "Change Portfolio",
+        "content": "Tap \"Change\" to select a different portfolio from the list or create a new one."
       },
       {
-        "subheading": "Create Garden",
-        "content": "From the garden selection menu, tap \"Create New Garden\" to start a new collection. You'll be prompted for a name and optional password protection."
+        "subheading": "Create Portfolio",
+        "content": "From the portfolio selection menu, tap \"Create New Portfolio\" to start a new collection. You'll be prompted for a name and optional password protection."
       },
       {
-        "subheading": "Delete Garden",
-        "content": "If not protected, gardens can be deleted via the action menu. Protected gardens require password confirmation before deletion.",
+        "subheading": "Delete Portfolio",
+        "content": "If not protected, portfolios can be deleted via the action menu. Protected portfolios require password confirmation before deletion.",
         "media": {
-          "src": "/videos/garden-demo.mov",
-          "title": "Gardens",
+          "src": "/videos/portfolio-demo.mov",
+          "title": "Portfolios",
           "type": "video"
         }
       }
@@ -293,7 +291,7 @@
         "content": "If you're experiencing any issues or have questions about the app, please reach out to our support team."
       },
       {
-        "content": "• Email: <a href=\"mailto:support@collectionparadise.com.au\" style=\"color: #646cff; text-decoration: underline;\">support@collectionparadise.com.au</a>"
+        "content": "• Email: <a href=\"mailto:support@indigoregen.com.au\" style=\"color: #646cff; text-decoration: underline;\">support@indigoregen.com.au</a>"
       },
       {
         "content": "We typically respond within 24-48 hours during business days."

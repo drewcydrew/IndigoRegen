@@ -4,7 +4,7 @@ function PrivacyPolicy({ onAccept }) {
       <p className="last-updated">Effective Date: April 17, 2025</p>
 
       <p className="introduction">
-        Thank you for using Collection Paradise. Your privacy is important to us. This
+        Thank you for using Indigo Regen. Your privacy is important to us. This
         Privacy Policy outlines how your data is handled when you use our app.
       </p>
 
@@ -12,9 +12,9 @@ function PrivacyPolicy({ onAccept }) {
         <h2 className="section-title">1. Data Usage and Storage</h2>
         <p className="paragraph">
           Our application connects to a test development database that
-          contains dummy library data. This data is used solely for
+          contains dummy regenerative agriculture data. This data is used solely for
           demonstration and testing purposes and does not represent real
-          users, books, or any personal information.
+          users, projects, or any personal information.
         </p>
       </div>
 
@@ -25,7 +25,7 @@ function PrivacyPolicy({ onAccept }) {
         </p>
         <div className="bullet-points">
           <p className="bullet-point">
-            • Selected book titles (from the dummy dataset)
+            • Selected project data (from the dummy dataset)
           </p>
           <p className="bullet-point">
             • Text-based search parameters

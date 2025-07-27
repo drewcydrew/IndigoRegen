@@ -68,7 +68,7 @@ function App() {
 
         <div className="modal-header">
           <h1 className="modal-title">
-            {activeTab === 'privacy' ? 'Privacy Policy' : 'Collection Paradise User Guide'}
+            {activeTab === 'privacy' ? 'Privacy Policy' : 'Indigo Regen User Guide'}
           </h1>
         </div>
 

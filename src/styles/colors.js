@@ -1,10 +1,10 @@
 const colors = {
-  background: "#455962", //main background for app: Charcoal
-  panelBackground: "#264653", //background used within panels: Payne's Gray
-  border: "#F2C164", //used for borders on panels: Xanthous
-  text: "#F2C164", //default text colour: Xanthous
-  icon: "#F2C164", //default icon colour, same as text: Xanthous
-  idleText: "#00A693", //idle text colour, used in places like navigation bar where you're distinguishing between active inactive selections: Persian Green
+  background: "#2D1B69", //main background for app: Deep Indigo
+  panelBackground: "#1E1B4B", //background used within panels: Dark Indigo
+  border: "#E8D5FF", //used for borders on panels: Light Lavender
+  text: "#E8D5FF", //default text colour: Light Lavender
+  icon: "#E8D5FF", //default icon colour, same as text: Light Lavender
+  idleText: "#7C3AED", //idle text colour, used in places like navigation bar where you're distinguishing between active inactive selections: Purple
 };
 
 export default colors;
