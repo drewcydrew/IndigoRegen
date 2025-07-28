@@ -10,25 +10,19 @@ import {
 
 const CoolSeats = () => {
   const documents = [
-    {
-      title: "Proof of concept for Cool Seat project for Shire",
-      description: "Complete guide for installing Cool Seats in your community",
-      filename: "Proof of concept for Cool Seat project for Shire.pdf",
-      size: "2.3 MB"
-    },
-    {
-      title: "Cool Seats Maintenance Manual",
-      description: "Ongoing care and maintenance instructions for Cool Seats",
-      filename: "Proof of concept for Cool Seat project for Shire.pdf", 
-      size: "1.8 MB"
-    },
-    {
-      title: "Community Engagement Toolkit",
-      description: "Resources for promoting Cool Seats in your local area",
-      filename: "Proof of concept for Cool Seat project for Shire.pdf",
-      size: "4.1 MB"
-    }
-  ];
+  {
+    title: "Proof of Concept for Cool Seat Project for Shire",
+    description: "Initial project proposal and feasibility study for implementing Cool Seats in the Shire community",
+    filename: "Proof of concept for Cool Seat project for Shire.pdf",
+    size: "2.3 MB"
+  },
+  {
+    title: "The Cool Seat Project",
+    description: "Comprehensive project documentation, design specifications, and implementation guidelines",
+    filename: "The Cool Seat Project.pdf",
+    size: "4.1 MB"
+  }
+];
 
   const handleDownload = (filename) => {
     // Create a download link - in a real app, this would point to actual files

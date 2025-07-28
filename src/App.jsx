@@ -1,18 +1,20 @@
 import { useState, useEffect } from 'react'
 import MissionStatement from './components/MissionStatement'
-import UserGuide from './components/UserGuide'
+import Homepage from './components/Homepage'
+import EventsWorkshops from './components/EventsWorkshops'
+import CoolSeats from './components/CoolSeats'
 import './App.css'
 
 function App() {
   const [missionAccepted, setMissionAccepted] = useState(false)
-  const [activeTab, setActiveTab] = useState('mission')
+  const [activeTab, setActiveTab] = useState('home')
   
   useEffect(() => {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab === 'user-guide' || tab === 'mission') {
-      setActiveTab(tab === 'user-guide' ? 'guide' : 'mission')
+    if (tab && ['home', 'mission', 'events', 'coolseats'].includes(tab)) {
+      setActiveTab(tab)
     }
   }, [])
 
@@ -24,8 +26,24 @@ function App() {
     setActiveTab(tab)
     // Update URL parameter
     const url = new URL(window.location)
-    url.searchParams.set('tab', tab === 'guide' ? 'user-guide' : 'mission')
+    url.searchParams.set('tab', tab)
     window.history.pushState({}, '', url)
+  }
+
+  const handleNavigate = (destination) => {
+    switch(destination) {
+      case 'mission':
+        handleTabChange('mission')
+        break
+      case 'coolseats':
+        handleTabChange('coolseats')
+        break
+      case 'eventsworkshops':
+        handleTabChange('events')
+        break
+      default:
+        handleTabChange('home')
+    }
   }
 
   if (missionAccepted) {
@@ -37,10 +55,10 @@ function App() {
           className="tab-button" 
           onClick={() => {
             setMissionAccepted(false)
-            handleTabChange('guide')
+            handleTabChange('home')
           }}
         >
-          View Link
+          Return to Home
         </button>
       </div>
     )
@@ -52,16 +70,28 @@ function App() {
         <div className="tab-header">
           <div className="tab-buttons">
             <button 
+              className={`tab-button ${activeTab === 'home' ? 'active' : ''}`}
+              onClick={() => handleTabChange('home')}
+            >
+              Home
+            </button>
+            <button 
               className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
               onClick={() => handleTabChange('mission')}
             >
               Our Mission
             </button>
             <button 
-              className={`tab-button ${activeTab === 'guide' ? 'active' : ''}`}
-              onClick={() => handleTabChange('guide')}
+              className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
+              onClick={() => handleTabChange('events')}
             >
-              Links
+              Events
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'coolseats' ? 'active' : ''}`}
+              onClick={() => handleTabChange('coolseats')}
+            >
+              Cool Seats
             </button>
           </div>
         </div>
@@ -69,22 +99,29 @@ function App() {
         <div className="modal-header">
           <div className="modal-header-content">
             <img 
-              src="/library-icon.jpg" 
+              src="/indigo-regen-icon.jpg" 
               alt="Indigo Regen Logo" 
               className="modal-logo"
             />
             <h1 className="modal-title">
-              {activeTab === 'mission' ? 'Our Mission' : 'Indigo Regen Links'}
+              {activeTab === 'home' ? 'Indigo Regen' : 
+               activeTab === 'mission' ? 'Our Mission' : 
+               activeTab === 'events' ? 'Events & Workshops' :
+               'Cool Seats'}
             </h1>
           </div>
         </div>
 
         <div className="scroll-content">
           <div className="content-container">
-            {activeTab === 'mission' ? (
+            {activeTab === 'home' ? (
+              <Homepage onNavigate={handleNavigate} />
+            ) : activeTab === 'mission' ? (
               <MissionStatement onAccept={handleAccept} />
+            ) : activeTab === 'events' ? (
+              <EventsWorkshops />
             ) : (
-              <UserGuide />
+              <CoolSeats />
             )}
           </div>
         </div>
