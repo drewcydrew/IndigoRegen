@@ -1,32 +1,35 @@
 import React from 'react';
 import { 
   IoLeafOutline, 
-  IoGlobeOutline, 
-  IoMailOutline,
-  IoPeopleOutline,
   IoDownloadOutline,
   IoDocumentTextOutline,
+  IoMailOutline,
   IoArrowBackOutline
 } from 'react-icons/io5';
 
-const CoolSeats = ({ onNavigate }) => {
+const PermacultureResources = ({ onNavigate }) => {
   const documents = [
-  {
-    title: "Proof of Concept for Cool Seat Project for Shire",
-    description: "Initial project proposal and feasibility study for implementing Cool Seats in the Shire community",
-    filename: "Proof of concept for Cool Seat project for Shire.pdf",
-    size: "2.3 MB"
-  },
-  {
-    title: "The Cool Seat Project",
-    description: "Comprehensive project documentation, design specifications, and implementation guidelines",
-    filename: "The Cool Seat Project.pdf",
-    size: "4.1 MB"
-  }
-];
+    {
+      title: "Getting Started with Permaculture Living",
+      description: "Comprehensive guide to permaculture principles and practices for sustainable living",
+      filename: "Getting-Started-with-Permaculture-Living-Milkwood.pdf",
+      size: "3.2 MB"
+    },
+    {
+      title: "Bintrim Cafes & Restaurants Factsheet",
+      description: "Resource guide for implementing sustainable practices in food service businesses",
+      filename: "bintrim-cafes-restaurants-factsheet-160773.pdf",
+      size: "1.8 MB"
+    },
+    {
+      title: "Bintrim Cafes & Restaurants Factsheet (Alternative)",
+      description: "Additional resource guide for sustainable food service practices",
+      filename: "bintrim-cafes-restaurants-factsheet-160773 (1).pdf",
+      size: "1.8 MB"
+    }
+  ];
 
   const handleDownload = (filename) => {
-    // Create a download link - in a real app, this would point to actual files
     const link = document.createElement('a');
     link.href = `/documents/${filename}`;
     link.download = filename;
@@ -36,7 +39,7 @@ const CoolSeats = ({ onNavigate }) => {
   };
 
   return (
-    <div className="cool-seats-container" style={{ 
+    <div className="permaculture-resources-container" style={{ 
       padding: '2rem 0',
       maxWidth: '1200px',
       margin: '0 auto'
@@ -82,7 +85,7 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          Cool Seats
+          🌻 Permaculture & Sustainability
         </h2>
         <p style={{ 
           color: '#E8D5FF', 
@@ -92,64 +95,9 @@ const CoolSeats = ({ onNavigate }) => {
           maxWidth: '800px',
           margin: '0 auto'
         }}>
-          Cool Seats are innovative composting benches that combine community seating 
-          with sustainable waste management. These beautiful, functional installations 
-          provide gathering spaces while actively contributing to soil health and 
-          carbon sequestration.
+          Explore our collection of permaculture guides and sustainability resources 
+          to help you implement regenerative practices in your daily life and community.
         </p>
-      </div>
-
-      <div className="features-section" style={{ marginBottom: '3rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem'
-        }}>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #7C3AED',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoLeafOutline size={48} color="#7C3AED" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Composting Technology</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Built-in composting chambers process organic waste while you sit and relax, 
-              turning kitchen scraps into rich soil amendment.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #10B981',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoPeopleOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Community Gathering</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Designed as comfortable seating for conversations, workshops, and 
-              community events while serving an environmental purpose.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #F59E0B',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoGlobeOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Environmental Impact</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Each Cool Seat diverts organic waste from landfills, reduces methane 
-              emissions, and creates valuable compost for local gardens.
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="documents-section" style={{ marginBottom: '3rem' }}>
@@ -160,7 +108,7 @@ const CoolSeats = ({ onNavigate }) => {
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Documentation & Resources
+          Available Resources
         </h3>
         
         <div style={{
@@ -184,7 +132,7 @@ const CoolSeats = ({ onNavigate }) => {
               }}
               onClick={() => handleDownload(doc.filename)}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#7C3AED';
+                e.currentTarget.style.borderColor = '#84CC16';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
@@ -192,7 +140,7 @@ const CoolSeats = ({ onNavigate }) => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              <IoDocumentTextOutline size={40} color="#7C3AED" />
+              <IoDocumentTextOutline size={40} color="#84CC16" />
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
                   color: '#E8D5FF', 
@@ -211,22 +159,53 @@ const CoolSeats = ({ onNavigate }) => {
                   {doc.description}
                 </p>
                 <span style={{ 
-                  color: '#7C3AED', 
+                  color: '#84CC16', 
                   fontSize: '0.8rem',
                   fontWeight: '500'
                 }}>
                   {doc.size}
                 </span>
               </div>
-              <IoDownloadOutline size={24} color="#7C3AED" />
+              <IoDownloadOutline size={24} color="#84CC16" />
             </div>
           ))}
         </div>
       </div>
 
+      <div className="info-section" style={{ marginBottom: '3rem' }}>
+        <div style={{
+          background: '#1E1B4B',
+          border: '2px solid #84CC16',
+          borderRadius: '12px',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
+          <IoLeafOutline size={48} color="#84CC16" style={{ marginBottom: '1rem' }} />
+          <h3 style={{ 
+            color: '#E8D5FF', 
+            fontSize: '1.8rem', 
+            marginBottom: '1rem',
+            fontWeight: '600'
+          }}>
+            About Permaculture
+          </h3>
+          <p style={{ 
+            color: '#E8D5FF', 
+            marginBottom: '1rem',
+            opacity: 0.9,
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            Permaculture is a design philosophy that works with natural systems to create 
+            sustainable and self-sufficient human habitats. These resources will help you 
+            understand and implement permaculture principles in your home, garden, and community.
+          </p>
+        </div>
+      </div>
+
       <div className="contact-section" style={{ 
         background: '#1E1B4B',
-        border: '2px solid #7C3AED',
+        border: '2px solid #84CC16',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
@@ -237,47 +216,47 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Want Cool Seats in Your Community?
+          Want to Learn More?
         </h3>
         <p style={{ 
           color: '#E8D5FF', 
           marginBottom: '1.5rem',
           opacity: 0.9
         }}>
-          Interested in installing Cool Seats in your local area? We'd love to help you get started!
+          Interested in permaculture workshops or sustainable living practices? Get in touch!
         </p>
         
         <a 
-          href="mailto:coolseats@indigoregen.com.au?subject=Cool Seats Installation Inquiry"
+          href="mailto:learning@indigoregen.com.au?subject=Permaculture & Sustainability Inquiry"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#7C3AED',
+            color: '#84CC16',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(124, 58, 237, 0.1)',
+            background: 'rgba(132, 204, 22, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #7C3AED',
+            border: '2px solid #84CC16',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
+            e.target.style.background = '#84CC16';
             e.target.style.color = '#E8D5FF';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(124, 58, 237, 0.1)';
-            e.target.style.color = '#7C3AED';
+            e.target.style.background = 'rgba(132, 204, 22, 0.1)';
+            e.target.style.color = '#84CC16';
           }}
         >
           <IoMailOutline size={24} />
-          Contact Us About Cool Seats
+          Contact Us About Permaculture
         </a>
       </div>
     </div>
   );
 };
 
-export default CoolSeats;
+export default PermacultureResources;

@@ -1,6 +1,39 @@
-function MissionStatement({ onAccept }) {
+import { IoArrowBackOutline } from 'react-icons/io5';
+
+function MissionStatement({ onAccept, onNavigate }) {
   return (
     <>
+      <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
+        <button
+          onClick={() => onNavigate && onNavigate('home')}
+          style={{
+            background: 'transparent',
+            color: '#7C3AED',
+            border: '2px solid #7C3AED',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            fontSize: '1rem',
+            fontWeight: '500',
+            transition: 'all 0.3s ease',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.background = '#7C3AED';
+            e.target.style.color = '#E8D5FF';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.background = 'transparent';
+            e.target.style.color = '#7C3AED';
+          }}
+        >
+          <IoArrowBackOutline size={20} />
+          Back to Home
+        </button>
+      </div>
+
       <p className="last-updated">Updated: April 17, 2025</p>
 
       <p className="introduction">

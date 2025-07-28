@@ -1,32 +1,46 @@
 import React from 'react';
 import { 
-  IoLeafOutline, 
   IoGlobeOutline, 
-  IoMailOutline,
-  IoPeopleOutline,
   IoDownloadOutline,
   IoDocumentTextOutline,
+  IoImageOutline,
+  IoMailOutline,
   IoArrowBackOutline
 } from 'react-icons/io5';
 
-const CoolSeats = ({ onNavigate }) => {
+const PlantBasedTreaty = ({ onNavigate }) => {
   const documents = [
-  {
-    title: "Proof of Concept for Cool Seat Project for Shire",
-    description: "Initial project proposal and feasibility study for implementing Cool Seats in the Shire community",
-    filename: "Proof of concept for Cool Seat project for Shire.pdf",
-    size: "2.3 MB"
-  },
-  {
-    title: "The Cool Seat Project",
-    description: "Comprehensive project documentation, design specifications, and implementation guidelines",
-    filename: "The Cool Seat Project.pdf",
-    size: "4.1 MB"
-  }
-];
+    {
+      title: "Plant Based Treaty's 40 Suggested Proposals",
+      description: "Comprehensive document outlining 40 proposals for plant-based policy changes",
+      filename: "Plant Based Treaty's 40 suggested proposals - Google Docs.pdf",
+      size: "2.1 MB",
+      type: "pdf"
+    },
+    {
+      title: "Plant Based Treaty's 40 Suggested Proposals (Alternative)",
+      description: "Alternative version of the 40 proposals document",
+      filename: "Plant Based Treaty's 40 suggested proposals - Google Docs (1).pdf",
+      size: "2.1 MB",
+      type: "pdf"
+    },
+    {
+      title: "We Endorse PBT Image",
+      description: "Endorsement image for Plant Based Treaty support",
+      filename: "We Endorse PBT.jpg",
+      size: "245 KB",
+      type: "image"
+    },
+    {
+      title: "We Endorse PBT Image (Alternative)",
+      description: "Alternative endorsement image for Plant Based Treaty",
+      filename: "We Endorse PBT (1).jpg",
+      size: "245 KB",
+      type: "image"
+    }
+  ];
 
   const handleDownload = (filename) => {
-    // Create a download link - in a real app, this would point to actual files
     const link = document.createElement('a');
     link.href = `/documents/${filename}`;
     link.download = filename;
@@ -36,7 +50,7 @@ const CoolSeats = ({ onNavigate }) => {
   };
 
   return (
-    <div className="cool-seats-container" style={{ 
+    <div className="plant-based-treaty-container" style={{ 
       padding: '2rem 0',
       maxWidth: '1200px',
       margin: '0 auto'
@@ -82,7 +96,7 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          Cool Seats
+          🥦 Plant-Based Treaty
         </h2>
         <p style={{ 
           color: '#E8D5FF', 
@@ -92,64 +106,10 @@ const CoolSeats = ({ onNavigate }) => {
           maxWidth: '800px',
           margin: '0 auto'
         }}>
-          Cool Seats are innovative composting benches that combine community seating 
-          with sustainable waste management. These beautiful, functional installations 
-          provide gathering spaces while actively contributing to soil health and 
-          carbon sequestration.
+          The Plant Based Treaty is a grassroots campaign designed to put food systems 
+          at the center of combating the climate crisis. Explore our resources and 
+          learn how to support this important initiative.
         </p>
-      </div>
-
-      <div className="features-section" style={{ marginBottom: '3rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem'
-        }}>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #7C3AED',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoLeafOutline size={48} color="#7C3AED" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Composting Technology</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Built-in composting chambers process organic waste while you sit and relax, 
-              turning kitchen scraps into rich soil amendment.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #10B981',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoPeopleOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Community Gathering</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Designed as comfortable seating for conversations, workshops, and 
-              community events while serving an environmental purpose.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #F59E0B',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoGlobeOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Environmental Impact</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Each Cool Seat diverts organic waste from landfills, reduces methane 
-              emissions, and creates valuable compost for local gardens.
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="documents-section" style={{ marginBottom: '3rem' }}>
@@ -160,7 +120,7 @@ const CoolSeats = ({ onNavigate }) => {
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Documentation & Resources
+          Available Resources
         </h3>
         
         <div style={{
@@ -184,7 +144,7 @@ const CoolSeats = ({ onNavigate }) => {
               }}
               onClick={() => handleDownload(doc.filename)}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#7C3AED';
+                e.currentTarget.style.borderColor = '#F97316';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
@@ -192,7 +152,11 @@ const CoolSeats = ({ onNavigate }) => {
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              <IoDocumentTextOutline size={40} color="#7C3AED" />
+              {doc.type === 'image' ? (
+                <IoImageOutline size={40} color="#F97316" />
+              ) : (
+                <IoDocumentTextOutline size={40} color="#F97316" />
+              )}
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
                   color: '#E8D5FF', 
@@ -211,22 +175,54 @@ const CoolSeats = ({ onNavigate }) => {
                   {doc.description}
                 </p>
                 <span style={{ 
-                  color: '#7C3AED', 
+                  color: '#F97316', 
                   fontSize: '0.8rem',
                   fontWeight: '500'
                 }}>
                   {doc.size}
                 </span>
               </div>
-              <IoDownloadOutline size={24} color="#7C3AED" />
+              <IoDownloadOutline size={24} color="#F97316" />
             </div>
           ))}
         </div>
       </div>
 
+      <div className="info-section" style={{ marginBottom: '3rem' }}>
+        <div style={{
+          background: '#1E1B4B',
+          border: '2px solid #F97316',
+          borderRadius: '12px',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
+          <IoGlobeOutline size={48} color="#F97316" style={{ marginBottom: '1rem' }} />
+          <h3 style={{ 
+            color: '#E8D5FF', 
+            fontSize: '1.8rem', 
+            marginBottom: '1rem',
+            fontWeight: '600'
+          }}>
+            About the Plant Based Treaty
+          </h3>
+          <p style={{ 
+            color: '#E8D5FF', 
+            marginBottom: '1rem',
+            opacity: 0.9,
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            The Plant Based Treaty addresses the urgent need to reduce emissions from animal 
+            agriculture and transition to more sustainable plant-based food systems. It calls 
+            for governments, organizations, and individuals to take action on climate-friendly 
+            food policies.
+          </p>
+        </div>
+      </div>
+
       <div className="contact-section" style={{ 
         background: '#1E1B4B',
-        border: '2px solid #7C3AED',
+        border: '2px solid #F97316',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
@@ -237,47 +233,47 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Want Cool Seats in Your Community?
+          Support the Plant Based Treaty
         </h3>
         <p style={{ 
           color: '#E8D5FF', 
           marginBottom: '1.5rem',
           opacity: 0.9
         }}>
-          Interested in installing Cool Seats in your local area? We'd love to help you get started!
+          Want to learn more about supporting the Plant Based Treaty or organizing in your community?
         </p>
         
         <a 
-          href="mailto:coolseats@indigoregen.com.au?subject=Cool Seats Installation Inquiry"
+          href="mailto:climate@indigoregen.com.au?subject=Plant Based Treaty Inquiry"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#7C3AED',
+            color: '#F97316',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(124, 58, 237, 0.1)',
+            background: 'rgba(249, 115, 22, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #7C3AED',
+            border: '2px solid #F97316',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
+            e.target.style.background = '#F97316';
             e.target.style.color = '#E8D5FF';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(124, 58, 237, 0.1)';
-            e.target.style.color = '#7C3AED';
+            e.target.style.background = 'rgba(249, 115, 22, 0.1)';
+            e.target.style.color = '#F97316';
           }}
         >
           <IoMailOutline size={24} />
-          Contact Us About Cool Seats
+          Contact Us About Plant Based Treaty
         </a>
       </div>
     </div>
   );
 };
 
-export default CoolSeats;
+export default PlantBasedTreaty;

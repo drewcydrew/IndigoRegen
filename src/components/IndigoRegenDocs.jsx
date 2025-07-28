@@ -1,32 +1,41 @@
 import React from 'react';
 import { 
-  IoLeafOutline, 
-  IoGlobeOutline, 
-  IoMailOutline,
-  IoPeopleOutline,
+  IoBusinessOutline, 
   IoDownloadOutline,
   IoDocumentTextOutline,
+  IoMailOutline,
   IoArrowBackOutline
 } from 'react-icons/io5';
 
-const CoolSeats = ({ onNavigate }) => {
+const IndigoRegenDocs = ({ onNavigate }) => {
   const documents = [
-  {
-    title: "Proof of Concept for Cool Seat Project for Shire",
-    description: "Initial project proposal and feasibility study for implementing Cool Seats in the Shire community",
-    filename: "Proof of concept for Cool Seat project for Shire.pdf",
-    size: "2.3 MB"
-  },
-  {
-    title: "The Cool Seat Project",
-    description: "Comprehensive project documentation, design specifications, and implementation guidelines",
-    filename: "The Cool Seat Project.pdf",
-    size: "4.1 MB"
-  }
-];
+    {
+      title: "Indigo Regen ABN and TFN",
+      description: "Official Australian Business Number and Tax File Number documentation",
+      filename: "Indigo Regen ABN and TFN.docx.pdf",
+      size: "156 KB"
+    },
+    {
+      title: "Indigo Regen Inc Membership Form (Draft)",
+      description: "Draft membership application form for joining Indigo Regen Inc",
+      filename: "Indigo Regen Inc Membership form draft.docx.pdf",
+      size: "298 KB"
+    },
+    {
+      title: "Indigo Regen Inc. Model Rules",
+      description: "Official model rules and governance structure for the organization",
+      filename: "Indigo Regen Inc. Model rules.docx.pdf",
+      size: "445 KB"
+    },
+    {
+      title: "Indigo Regen Inc. Model Rules (Version 2)",
+      description: "Alternative version of the model rules document",
+      filename: "Indigo Regen Inc. Model rules.docx (1).pdf",
+      size: "445 KB"
+    }
+  ];
 
   const handleDownload = (filename) => {
-    // Create a download link - in a real app, this would point to actual files
     const link = document.createElement('a');
     link.href = `/documents/${filename}`;
     link.download = filename;
@@ -36,7 +45,7 @@ const CoolSeats = ({ onNavigate }) => {
   };
 
   return (
-    <div className="cool-seats-container" style={{ 
+    <div className="indigo-regen-docs-container" style={{ 
       padding: '2rem 0',
       maxWidth: '1200px',
       margin: '0 auto'
@@ -82,7 +91,7 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          Cool Seats
+          🧾 Indigo Regen Inc.
         </h2>
         <p style={{ 
           color: '#E8D5FF', 
@@ -92,64 +101,9 @@ const CoolSeats = ({ onNavigate }) => {
           maxWidth: '800px',
           margin: '0 auto'
         }}>
-          Cool Seats are innovative composting benches that combine community seating 
-          with sustainable waste management. These beautiful, functional installations 
-          provide gathering spaces while actively contributing to soil health and 
-          carbon sequestration.
+          Official documents and resources for Indigo Regen Inc., including 
+          membership information, governance structures, and legal documentation.
         </p>
-      </div>
-
-      <div className="features-section" style={{ marginBottom: '3rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem'
-        }}>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #7C3AED',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoLeafOutline size={48} color="#7C3AED" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Composting Technology</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Built-in composting chambers process organic waste while you sit and relax, 
-              turning kitchen scraps into rich soil amendment.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #10B981',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoPeopleOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Community Gathering</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Designed as comfortable seating for conversations, workshops, and 
-              community events while serving an environmental purpose.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #F59E0B',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoGlobeOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Environmental Impact</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Each Cool Seat diverts organic waste from landfills, reduces methane 
-              emissions, and creates valuable compost for local gardens.
-            </p>
-          </div>
-        </div>
       </div>
 
       <div className="documents-section" style={{ marginBottom: '3rem' }}>
@@ -160,7 +114,7 @@ const CoolSeats = ({ onNavigate }) => {
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Documentation & Resources
+          Available Documents
         </h3>
         
         <div style={{
@@ -224,6 +178,37 @@ const CoolSeats = ({ onNavigate }) => {
         </div>
       </div>
 
+      <div className="info-section" style={{ marginBottom: '3rem' }}>
+        <div style={{
+          background: '#1E1B4B',
+          border: '2px solid #7C3AED',
+          borderRadius: '12px',
+          padding: '2rem',
+          textAlign: 'center'
+        }}>
+          <IoBusinessOutline size={48} color="#7C3AED" style={{ marginBottom: '1rem' }} />
+          <h3 style={{ 
+            color: '#E8D5FF', 
+            fontSize: '1.8rem', 
+            marginBottom: '1rem',
+            fontWeight: '600'
+          }}>
+            About Indigo Regen Inc.
+          </h3>
+          <p style={{ 
+            color: '#E8D5FF', 
+            marginBottom: '1rem',
+            opacity: 0.9,
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            Indigo Regen Inc. is a registered not-for-profit organization dedicated to 
+            promoting regenerative practices in our community. These documents provide 
+            transparency about our structure, governance, and membership processes.
+          </p>
+        </div>
+      </div>
+
       <div className="contact-section" style={{ 
         background: '#1E1B4B',
         border: '2px solid #7C3AED',
@@ -237,18 +222,18 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Want Cool Seats in Your Community?
+          Interested in Membership?
         </h3>
         <p style={{ 
           color: '#E8D5FF', 
           marginBottom: '1.5rem',
           opacity: 0.9
         }}>
-          Interested in installing Cool Seats in your local area? We'd love to help you get started!
+          Want to learn more about becoming a member of Indigo Regen Inc.?
         </p>
         
         <a 
-          href="mailto:coolseats@indigoregen.com.au?subject=Cool Seats Installation Inquiry"
+          href="mailto:membership@indigoregen.com.au?subject=Membership Inquiry"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -273,11 +258,11 @@ const CoolSeats = ({ onNavigate }) => {
           }}
         >
           <IoMailOutline size={24} />
-          Contact Us About Cool Seats
+          Contact Us About Membership
         </a>
       </div>
     </div>
   );
 };
 
-export default CoolSeats;
+export default IndigoRegenDocs;

@@ -71,14 +71,7 @@ const Homepage = ({ onNavigate }) => {
       title: 'Community Gardens',
       description: 'Find local community gardens, join PODS growing projects, and learn about sustainable food production.',
       color: '#7C3AED',
-      onClick: () => window.open('mailto:gardens@indigoregen.com.au?subject=Community Gardens Inquiry', '_blank')
-    },
-    {
-      icon: IoHeartOutline,
-      title: 'Volunteer',
-      description: 'Get involved with composting programs, slow fashion shows, and other regenerative initiatives.',
-      color: '#10B981',
-      onClick: () => window.open('mailto:volunteer@indigoregen.com.au?subject=Volunteer Inquiry', '_blank')
+      onClick: () => onNavigate && onNavigate('gardens')
     },
     {
       icon: IoCalendarOutline,
@@ -88,32 +81,11 @@ const Homepage = ({ onNavigate }) => {
       onClick: () => onNavigate && onNavigate('eventsworkshops')
     },
     {
-      icon: IoNewspaperOutline,
-      title: 'Newsletter',
-      description: 'Subscribe to our newsletter for updates on regenerative practices and community news.',
-      color: '#EF4444',
-      onClick: () => window.open('mailto:newsletter@indigoregen.com.au?subject=Newsletter Subscription', '_blank')
-    },
-    {
-      icon: IoPeopleOutline,
-      title: 'Skill Sharing',
-      description: 'Connect with neighbors to share resources, skills, and equipment in our community network.',
-      color: '#8B5CF6',
-      onClick: () => window.open('mailto:skillshare@indigoregen.com.au?subject=Skill Sharing', '_blank')
-    },
-    {
-      icon: IoShareSocialOutline,
-      title: 'Transport Sharing',
-      description: 'Join our car share network and community transport initiatives for sustainable travel.',
-      color: '#06B6D4',
-      onClick: () => window.open('mailto:transport@indigoregen.com.au?subject=Transport Sharing', '_blank')
-    },
-    {
       icon: IoBookOutline,
-      title: 'Learning Resources',
-      description: 'Access our library of things, educational materials on permaculture and regenerative practices.',
+      title: 'Permaculture Resources',
+      description: 'Access guides on permaculture, sustainable living, and regenerative practices.',
       color: '#84CC16',
-      onClick: () => window.open('mailto:learning@indigoregen.com.au?subject=Learning Resources', '_blank')
+      onClick: () => onNavigate && onNavigate('permaculture')
     },
     {
       icon: IoCarOutline,
@@ -124,10 +96,17 @@ const Homepage = ({ onNavigate }) => {
     },
     {
       icon: IoGlobeOutline,
-      title: 'Climate Action',
-      description: 'Join our efforts in emissions reduction, climate resilience, and supporting regenerative practices.',
+      title: 'Plant-Based Treaty',
+      description: 'Join our efforts in emissions reduction, climate resilience, and supporting the plant-based treaty.',
       color: '#F97316',
-      onClick: () => window.open('mailto:climate@indigoregen.com.au?subject=Climate Action', '_blank')
+      onClick: () => onNavigate && onNavigate('plantbased')
+    },
+    {
+      icon: IoPeopleOutline,
+      title: 'Indigo Regen Docs',
+      description: 'Access official documents, membership forms, governance structures, and legal documentation.',
+      color: '#8B5CF6',
+      onClick: () => onNavigate && onNavigate('indigodocs')
     }
   ];
 

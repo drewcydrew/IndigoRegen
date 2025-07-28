@@ -3,6 +3,10 @@ import MissionStatement from './components/MissionStatement'
 import Homepage from './components/Homepage'
 import EventsWorkshops from './components/EventsWorkshops'
 import CoolSeats from './components/CoolSeats'
+import CommunityGardens from './components/CommunityGardens'
+import PermacultureResources from './components/PermacultureResources'
+import PlantBasedTreaty from './components/PlantBasedTreaty'
+import IndigoRegenDocs from './components/IndigoRegenDocs'
 import './App.css'
 
 function App() {
@@ -13,7 +17,7 @@ function App() {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab && ['home', 'mission', 'events', 'coolseats'].includes(tab)) {
+    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs'].includes(tab)) {
       setActiveTab(tab)
     }
   }, [])
@@ -40,6 +44,18 @@ function App() {
         break
       case 'eventsworkshops':
         handleTabChange('events')
+        break
+      case 'gardens':
+        handleTabChange('gardens')
+        break
+      case 'permaculture':
+        handleTabChange('permaculture')
+        break
+      case 'plantbased':
+        handleTabChange('plantbased')
+        break
+      case 'indigodocs':
+        handleTabChange('indigodocs')
         break
       default:
         handleTabChange('home')
@@ -82,6 +98,12 @@ function App() {
               Our Mission
             </button>
             <button 
+              className={`tab-button ${activeTab === 'gardens' ? 'active' : ''}`}
+              onClick={() => handleTabChange('gardens')}
+            >
+              Gardens
+            </button>
+            <button 
               className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
               onClick={() => handleTabChange('events')}
             >
@@ -92,6 +114,24 @@ function App() {
               onClick={() => handleTabChange('coolseats')}
             >
               Cool Seats
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'permaculture' ? 'active' : ''}`}
+              onClick={() => handleTabChange('permaculture')}
+            >
+              Permaculture
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'plantbased' ? 'active' : ''}`}
+              onClick={() => handleTabChange('plantbased')}
+            >
+              Plant Treaty
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'indigodocs' ? 'active' : ''}`}
+              onClick={() => handleTabChange('indigodocs')}
+            >
+              Docs
             </button>
           </div>
         </div>
@@ -106,8 +146,13 @@ function App() {
             <h1 className="modal-title">
               {activeTab === 'home' ? 'Indigo Regen' : 
                activeTab === 'mission' ? 'Our Mission' : 
+               activeTab === 'gardens' ? 'Community Gardens' :
                activeTab === 'events' ? 'Events & Workshops' :
-               'Cool Seats'}
+               activeTab === 'coolseats' ? 'Cool Seats' :
+               activeTab === 'permaculture' ? 'Permaculture & Sustainability' :
+               activeTab === 'plantbased' ? 'Plant-Based Treaty' :
+               activeTab === 'indigodocs' ? 'Indigo Regen Inc.' :
+               'Indigo Regen'}
             </h1>
           </div>
         </div>
@@ -117,11 +162,21 @@ function App() {
             {activeTab === 'home' ? (
               <Homepage onNavigate={handleNavigate} />
             ) : activeTab === 'mission' ? (
-              <MissionStatement onAccept={handleAccept} />
+              <MissionStatement onAccept={handleAccept} onNavigate={handleNavigate} />
+            ) : activeTab === 'gardens' ? (
+              <CommunityGardens onNavigate={handleNavigate} />
             ) : activeTab === 'events' ? (
-              <EventsWorkshops />
+              <EventsWorkshops onNavigate={handleNavigate} />
+            ) : activeTab === 'coolseats' ? (
+              <CoolSeats onNavigate={handleNavigate} />
+            ) : activeTab === 'permaculture' ? (
+              <PermacultureResources onNavigate={handleNavigate} />
+            ) : activeTab === 'plantbased' ? (
+              <PlantBasedTreaty onNavigate={handleNavigate} />
+            ) : activeTab === 'indigodocs' ? (
+              <IndigoRegenDocs onNavigate={handleNavigate} />
             ) : (
-              <CoolSeats />
+              <Homepage onNavigate={handleNavigate} />
             )}
           </div>
         </div>
