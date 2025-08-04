@@ -48,28 +48,40 @@ const CommunityGardens = ({ onNavigate }) => {
 
   const gardens = [
     {
-      name: "Riverside Community Garden",
-      location: "Near Riverside Park, Main Street",
-      description: "Established community garden with 30 plots, shared composting area, and tool library",
-      features: ["Individual plots available", "Rainwater harvesting", "Native plant section", "Community shed"],
-      contact: "riverside@indigoregen.com.au",
-      status: "Active - Plots Available"
+      name: "Quercus Community Garden",
+      location: "Beechworth",
+      description: "Community garden initiative focused on sustainable food production and community connection",
+      features: ["Community plots", "Sustainable practices", "Local food production", "Community workshops"],
+      contact: "gardens@indigoregen.com.au",
+      status: "Active - Community Partner",
+      website: "https://quercusbeechworth.org.au/community-garden"
     },
     {
-      name: "School Partnership Garden",
-      location: "Local Primary School Grounds",
-      description: "Educational garden program working with local schools to teach children about sustainable food production",
-      features: ["School holiday programs", "Educational workshops", "Student-led projects", "Harvest festivals"],
-      contact: "schools@indigoregen.com.au",
-      status: "Active - Volunteers Needed"
+      name: "Beechworth Community Early Years Learning Centre Garden",
+      location: "Beechworth",
+      description: "Educational garden program for early childhood learning, teaching children about plants and food",
+      features: ["Early years education", "Hands-on learning", "Child-friendly plots", "Nature connection"],
+      contact: "gardens@indigoregen.com.au",
+      status: "Active - Educational Partner",
+      website: null
     },
     {
-      name: "Community Centre PODS",
-      location: "Community Centre Car Park",
-      description: "Portable growing system demonstrating urban agriculture in small spaces",
-      features: ["Mobile planters", "Vertical growing", "Demonstration site", "Weekend workshops"],
-      contact: "pods@indigoregen.com.au",
-      status: "Planned - Starting Soon"
+      name: "Montessori Beechworth Garden",
+      location: "Beechworth",
+      description: "Montessori-integrated garden program supporting hands-on environmental education",
+      features: ["Montessori curriculum", "Child-led learning", "Environmental education", "Seasonal activities"],
+      contact: "gardens@indigoregen.com.au",
+      status: "Active - Educational Partner",
+      website: "https://www.beechworthmontessori.vic.edu.au"
+    },
+    {
+      name: "Old Beechworth Gaol Garden",
+      location: "Beechworth Historic Precinct",
+      description: "Heritage site garden project combining historical preservation with sustainable growing",
+      features: ["Heritage integration", "Historical education", "Sustainable tourism", "Community events"],
+      contact: "gardens@indigoregen.com.au",
+      status: "Active - Heritage Partner",
+      website: "https://www.theobg.com.au"
     }
   ];
 
@@ -162,6 +174,50 @@ const CommunityGardens = ({ onNavigate }) => {
           gardener, there's a place for you to grow food, learn skills, and connect 
           with your community.
         </p>
+      </div>
+
+      <div className="video-section" style={{ 
+        textAlign: 'center', 
+        marginBottom: '3rem' 
+      }}>
+        <h3 style={{ 
+          color: '#E8D5FF', 
+          fontSize: '2rem', 
+          marginBottom: '2rem',
+          fontWeight: '600'
+        }}>
+          Community Gardens in Action
+        </h3>
+        <div style={{
+          maxWidth: '800px',
+          margin: '0 auto',
+          background: '#1E1B4B',
+          border: '2px solid #7C3AED',
+          borderRadius: '12px',
+          padding: '1rem',
+          overflow: 'hidden'
+        }}>
+          <div style={{
+            position: 'relative',
+            paddingBottom: '56.25%' // 16:9 aspect ratio
+          }}>
+            <iframe
+              src="https://www.youtube.com/embed/WOEz7zpg828"
+              title="Community Gardens Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                borderRadius: '8px'
+              }}
+            />
+          </div>
+        </div>
       </div>
 
       <div className="features-section" style={{ marginBottom: '3rem' }}>
@@ -380,7 +436,8 @@ const CommunityGardens = ({ onNavigate }) => {
                   padding: '0.5rem 1rem',
                   border: '2px solid #7C3AED',
                   borderRadius: '6px',
-                  transition: 'all 0.3s ease'
+                  transition: 'all 0.3s ease',
+                  marginRight: garden.website ? '1rem' : '0'
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.background = '#7C3AED';
@@ -394,6 +451,38 @@ const CommunityGardens = ({ onNavigate }) => {
                 <IoMailOutline size={16} />
                 Get Involved
               </a>
+              
+              {garden.website && (
+                <a 
+                  href={garden.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '0.5rem',
+                    color: '#10B981',
+                    textDecoration: 'none',
+                    fontSize: '0.9rem',
+                    fontWeight: '500',
+                    padding: '0.5rem 1rem',
+                    border: '2px solid #10B981',
+                    borderRadius: '6px',
+                    transition: 'all 0.3s ease'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = '#10B981';
+                    e.currentTarget.style.color = '#E8D5FF';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = '#10B981';
+                  }}
+                >
+                  <IoMapOutline size={16} />
+                  Visit Website
+                </a>
+              )}
             </div>
           ))}
         </div>
