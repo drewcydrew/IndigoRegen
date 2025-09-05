@@ -134,7 +134,7 @@ const Homepage = ({ onNavigate }) => {
       {/* Hero Section with Mission Elements */}
       <div className="hero-section" style={{ 
         textAlign: 'center', 
-        marginBottom: '4rem',
+        marginBottom: '3rem',
         padding: '0 1rem'
       }}>
         <h1 style={{ 
@@ -167,6 +167,53 @@ const Homepage = ({ onNavigate }) => {
         </p>
       </div>
 
+      {/* Join Us Button Section */}
+      <div className="join-us-section" style={{
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
+        borderRadius: '12px',
+        padding: '2rem',
+        margin: '0 1rem 4rem 1rem',
+        textAlign: 'center'
+      }}>
+        <p style={{ 
+          color: '#1F2937', 
+          fontSize: '1.1rem',
+          margin: '0 0 1rem 0',
+          fontWeight: '500'
+        }}>
+          Ready to join our regenerative community?
+        </p>
+        <button 
+          onClick={() => onNavigate && onNavigate('membership')}
+          style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.5rem',
+            color: '#FFFFFF',
+            backgroundColor: '#6366F1',
+            border: '2px solid #6366F1',
+            fontSize: '1.1rem',
+            fontWeight: '500',
+            padding: '0.75rem 1.5rem',
+            borderRadius: '8px',
+            cursor: 'pointer',
+            transition: 'all 0.3s ease'
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.background = '#1F2937';
+            e.currentTarget.style.borderColor = '#1F2937';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.background = '#6366F1';
+            e.currentTarget.style.borderColor = '#6366F1';
+          }}
+        >
+          <IoPeopleOutline size={24} />
+          Join Us
+        </button>
+      </div>
+
       {/* Quick Links Section */}
       <div className="links-section" style={{ 
         marginBottom: '3rem',
@@ -196,58 +243,6 @@ const Homepage = ({ onNavigate }) => {
               onClick={link.onClick}
             />
           ))}
-        </div>
-      </div>
-
-      {/* Contact Section */}
-      <div className="footer-section" style={{
-        background: '#F8F9FA',
-        border: '2px solid #6366F1',
-        borderRadius: '12px',
-        padding: '2rem',
-        margin: '0 1rem',
-        textAlign: 'center'
-      }}>
-        <div style={{ 
-          marginTop: '0',
-          paddingTop: '0'
-        }}>
-          <p style={{ 
-            color: '#1F2937', 
-            fontSize: '1.1rem',
-            margin: '0 0 1rem 0',
-            fontWeight: '500'
-          }}>
-            Ready to join our regenerative community?
-          </p>
-          <button 
-            onClick={() => onNavigate && onNavigate('membership')}
-            style={{
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '0.5rem',
-              color: '#FFFFFF',
-              backgroundColor: '#6366F1',
-              border: '2px solid #6366F1',
-              fontSize: '1.1rem',
-              fontWeight: '500',
-              padding: '0.75rem 1.5rem',
-              borderRadius: '8px',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease'
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#1F2937';
-              e.currentTarget.style.borderColor = '#1F2937';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#6366F1';
-              e.currentTarget.style.borderColor = '#6366F1';
-            }}
-          >
-            <IoPeopleOutline size={24} />
-            Join Us
-          </button>
         </div>
       </div>
     </div>

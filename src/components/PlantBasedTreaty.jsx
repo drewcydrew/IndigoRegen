@@ -122,7 +122,7 @@ const PlantBasedTreaty = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          100 Cafes Campaign and Plant-Based Treaty
+          100 Cafes Campaign / Plant Based Treaty
         </h2>
       </div>
 
