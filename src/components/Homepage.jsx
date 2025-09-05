@@ -11,7 +11,8 @@ import {
   IoShareSocialOutline,
   IoCarOutline,
   IoArrowForwardOutline,
-  IoNutritionOutline
+  IoNutritionOutline,
+  IoGameControllerOutline
 } from 'react-icons/io5';
 
 const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
@@ -107,6 +108,20 @@ const Homepage = ({ onNavigate }) => {
       description: 'Join our efforts in emissions reduction, climate resilience, and supporting the plant-based treaty.',
       color: '#F97316',
       onClick: () => onNavigate && onNavigate('plantbased')
+    },
+    {
+      icon: IoPeopleOutline,
+      title: 'Membership',
+      description: 'Become a member and join our community of people working towards regenerative practices.',
+      color: '#EC4899',
+      onClick: () => onNavigate && onNavigate('membership')
+    },
+    {
+      icon: IoGameControllerOutline,
+      title: 'Adaption Game',
+      description: 'Learn climate adaptation through interactive gameplay and engaging educational challenges.',
+      color: '#06B6D4',
+      onClick: () => onNavigate && onNavigate('game')
     },
     {
       icon: IoPeopleOutline,

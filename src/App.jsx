@@ -8,6 +8,8 @@ import PermacultureResources from './components/PermacultureResources'
 import PlantBasedTreaty from './components/PlantBasedTreaty'
 import IndigoRegenDocs from './components/IndigoRegenDocs'
 import Composting from './components/Composting'
+import Membership from './components/Membership'
+import AdaptionGame from './components/AdaptionGame'
 import './App.css'
 
 function App() {
@@ -18,7 +20,7 @@ function App() {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs', 'composting'].includes(tab)) {
+    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs', 'composting', 'membership', 'game'].includes(tab)) {
       setActiveTab(tab)
     }
   }, [])
@@ -60,6 +62,12 @@ function App() {
         break
       case 'composting':
         handleTabChange('composting')
+        break
+      case 'membership':
+        handleTabChange('membership')
+        break
+      case 'game':
+        handleTabChange('game')
         break
       default:
         handleTabChange('home')
@@ -138,6 +146,18 @@ function App() {
               Plant Treaty
             </button>
             <button 
+              className={`tab-button ${activeTab === 'membership' ? 'active' : ''}`}
+              onClick={() => handleTabChange('membership')}
+            >
+              Membership
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'game' ? 'active' : ''}`}
+              onClick={() => handleTabChange('game')}
+            >
+              Adaption Game
+            </button>
+            <button 
               className={`tab-button ${activeTab === 'indigodocs' ? 'active' : ''}`}
               onClick={() => handleTabChange('indigodocs')}
             >
@@ -162,6 +182,8 @@ function App() {
                activeTab === 'coolseats' ? 'Cool Seats' :
                activeTab === 'permaculture' ? 'Permaculture & Sustainability' :
                activeTab === 'plantbased' ? 'Plant-Based Treaty' :
+               activeTab === 'membership' ? 'Membership' :
+               activeTab === 'game' ? 'Play The Adaption Game' :
                activeTab === 'indigodocs' ? 'Indigo Regen Inc.' :
                'Indigo Regen'}
             </h1>
@@ -186,6 +208,10 @@ function App() {
               <PermacultureResources onNavigate={handleNavigate} />
             ) : activeTab === 'plantbased' ? (
               <PlantBasedTreaty onNavigate={handleNavigate} />
+            ) : activeTab === 'membership' ? (
+              <Membership onNavigate={handleNavigate} />
+            ) : activeTab === 'game' ? (
+              <AdaptionGame onNavigate={handleNavigate} />
             ) : activeTab === 'indigodocs' ? (
               <IndigoRegenDocs onNavigate={handleNavigate} />
             ) : (
