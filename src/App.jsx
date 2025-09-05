@@ -20,7 +20,7 @@ function App() {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs', 'composting', 'membership', 'game'].includes(tab)) {
+    if (tab && ['home', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'composting', 'membership', 'game'].includes(tab)) {
       setActiveTab(tab)
     }
   }, [])
@@ -39,9 +39,6 @@ function App() {
 
   const handleNavigate = (destination) => {
     switch(destination) {
-      case 'mission':
-        handleTabChange('mission')
-        break
       case 'coolseats':
         handleTabChange('coolseats')
         break
@@ -56,9 +53,6 @@ function App() {
         break
       case 'plantbased':
         handleTabChange('plantbased')
-        break
-      case 'indigodocs':
-        handleTabChange('indigodocs')
         break
       case 'composting':
         handleTabChange('composting')
@@ -104,34 +98,22 @@ function App() {
               Home
             </button>
             <button 
-              className={`tab-button ${activeTab === 'mission' ? 'active' : ''}`}
-              onClick={() => handleTabChange('mission')}
-            >
-              Our Mission
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'gardens' ? 'active' : ''}`}
-              onClick={() => handleTabChange('gardens')}
-            >
-              Gardens
-            </button>
-            <button 
               className={`tab-button ${activeTab === 'composting' ? 'active' : ''}`}
               onClick={() => handleTabChange('composting')}
             >
               Composting
             </button>
             <button 
-              className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
-              onClick={() => handleTabChange('events')}
+              className={`tab-button ${activeTab === 'gardens' ? 'active' : ''}`}
+              onClick={() => handleTabChange('gardens')}
             >
-              Events
+              Community Gardens
             </button>
             <button 
-              className={`tab-button ${activeTab === 'coolseats' ? 'active' : ''}`}
-              onClick={() => handleTabChange('coolseats')}
+              className={`tab-button ${activeTab === 'game' ? 'active' : ''}`}
+              onClick={() => handleTabChange('game')}
             >
-              Cool Seats
+              Play The Adaption Game
             </button>
             <button 
               className={`tab-button ${activeTab === 'permaculture' ? 'active' : ''}`}
@@ -140,28 +122,28 @@ function App() {
               Permaculture
             </button>
             <button 
+              className={`tab-button ${activeTab === 'coolseats' ? 'active' : ''}`}
+              onClick={() => handleTabChange('coolseats')}
+            >
+              Cool Seats
+            </button>
+            <button 
               className={`tab-button ${activeTab === 'plantbased' ? 'active' : ''}`}
               onClick={() => handleTabChange('plantbased')}
             >
-              Plant Treaty
+              Plant Based Treaty
+            </button>
+            <button 
+              className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
+              onClick={() => handleTabChange('events')}
+            >
+              Events
             </button>
             <button 
               className={`tab-button ${activeTab === 'membership' ? 'active' : ''}`}
               onClick={() => handleTabChange('membership')}
             >
               Membership
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'game' ? 'active' : ''}`}
-              onClick={() => handleTabChange('game')}
-            >
-              Adaption Game
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'indigodocs' ? 'active' : ''}`}
-              onClick={() => handleTabChange('indigodocs')}
-            >
-              Docs
             </button>
           </div>
         </div>
@@ -175,7 +157,6 @@ function App() {
             />
             <h1 className="modal-title">
               {activeTab === 'home' ? 'Indigo Regen' : 
-               activeTab === 'mission' ? 'Our Mission' : 
                activeTab === 'gardens' ? 'Community Gardens' :
                activeTab === 'composting' ? 'Composting Programs' :
                activeTab === 'events' ? 'Events & Workshops' :
@@ -184,7 +165,6 @@ function App() {
                activeTab === 'plantbased' ? 'Plant-Based Treaty' :
                activeTab === 'membership' ? 'Membership' :
                activeTab === 'game' ? 'Play The Adaption Game' :
-               activeTab === 'indigodocs' ? 'Indigo Regen Inc.' :
                'Indigo Regen'}
             </h1>
           </div>
@@ -194,8 +174,6 @@ function App() {
           <div className="content-container">
             {activeTab === 'home' ? (
               <Homepage onNavigate={handleNavigate} />
-            ) : activeTab === 'mission' ? (
-              <MissionStatement onAccept={handleAccept} onNavigate={handleNavigate} />
             ) : activeTab === 'gardens' ? (
               <CommunityGardens onNavigate={handleNavigate} />
             ) : activeTab === 'composting' ? (
@@ -212,8 +190,6 @@ function App() {
               <Membership onNavigate={handleNavigate} />
             ) : activeTab === 'game' ? (
               <AdaptionGame onNavigate={handleNavigate} />
-            ) : activeTab === 'indigodocs' ? (
-              <IndigoRegenDocs onNavigate={handleNavigate} />
             ) : (
               <Homepage onNavigate={handleNavigate} />
             )}

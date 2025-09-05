@@ -122,13 +122,6 @@ const Homepage = ({ onNavigate }) => {
       description: 'Learn climate adaptation through interactive gameplay and engaging educational challenges.',
       color: '#06B6D4',
       onClick: () => onNavigate && onNavigate('game')
-    },
-    {
-      icon: IoPeopleOutline,
-      title: 'Indigo Regen Docs',
-      description: 'Access official documents, membership forms, governance structures, and legal documentation.',
-      color: '#8B5CF6',
-      onClick: () => onNavigate && onNavigate('indigodocs')
     }
   ];
 
@@ -172,43 +165,6 @@ const Homepage = ({ onNavigate }) => {
           We believe that meaningful change happens when communities come 
           together to share knowledge, resources, and hope for a sustainable future.
         </p>
-        
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '1rem',
-          flexWrap: 'wrap',
-          marginBottom: '2rem'
-        }}>
-          <button 
-            style={{
-              background: '#6366F1',
-              color: '#FFFFFF',
-              border: '2px solid #6366F1',
-              padding: '1rem 2rem',
-              borderRadius: '8px',
-              fontSize: '1.1rem',
-              fontWeight: '600',
-              cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '0.5rem'
-            }}
-            onClick={() => onNavigate && onNavigate('mission')}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#1F2937';
-              e.currentTarget.style.borderColor = '#1F2937';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#6366F1';
-              e.currentTarget.style.borderColor = '#6366F1';
-            }}
-          >
-            Read Our Full Mission
-            <IoArrowForwardOutline size={20} />
-          </button>
-        </div>
       </div>
 
       {/* Quick Links Section */}
@@ -299,5 +255,3 @@ const Homepage = ({ onNavigate }) => {
 };
 
 export default Homepage;
-
-
