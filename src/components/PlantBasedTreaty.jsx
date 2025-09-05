@@ -5,7 +5,12 @@ import {
   IoDocumentTextOutline,
   IoImageOutline,
   IoMailOutline,
-  IoArrowBackOutline
+  IoArrowBackOutline,
+  IoCafeOutline,
+  IoLeafOutline,
+  IoLinkOutline,
+  IoPlayOutline,
+  IoNutritionOutline
 } from 'react-icons/io5';
 
 const PlantBasedTreaty = ({ onNavigate }) => {
@@ -40,6 +45,27 @@ const PlantBasedTreaty = ({ onNavigate }) => {
     }
   ];
 
+  const externalLinks = [
+    {
+      title: "How to be a Good Ancestor",
+      description: "Inspiring video about our responsibility to future generations",
+      url: "https://youtu.be/61hRq0D8Zcs",
+      type: "video"
+    },
+    {
+      title: "Bundanoon On Tap",
+      description: "Learn about Bundanoon - Australia's first plastic bottle free town",
+      url: "https://bundanoonontap.com/",
+      type: "website"
+    },
+    {
+      title: "Plant Based Treaty Documents & Endorsements",
+      description: "Access comprehensive documents and endorsement materials",
+      url: "https://drive.google.com/file/d/1as1h94IkPlLayQZ1jltzpg4qEnXUfjS3/view?usp=drive_link",
+      type: "document"
+    }
+  ];
+
   const handleDownload = (filename) => {
     const link = document.createElement('a');
     link.href = `/documents/${filename}`;
@@ -60,8 +86,8 @@ const PlantBasedTreaty = ({ onNavigate }) => {
           onClick={() => onNavigate && onNavigate('home')}
           style={{
             background: 'transparent',
-            color: '#7C3AED',
-            border: '2px solid #7C3AED',
+            color: '#6366F1',
+            border: '2px solid #6366F1',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
             cursor: 'pointer',
@@ -73,12 +99,12 @@ const PlantBasedTreaty = ({ onNavigate }) => {
             gap: '0.5rem'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
-            e.target.style.color = '#E8D5FF';
+            e.target.style.background = '#6366F1';
+            e.target.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
             e.target.style.background = 'transparent';
-            e.target.style.color = '#7C3AED';
+            e.target.style.color = '#6366F1';
           }}
         >
           <IoArrowBackOutline size={20} />
@@ -91,49 +117,75 @@ const PlantBasedTreaty = ({ onNavigate }) => {
         marginBottom: '3rem' 
       }}>
         <h2 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2.5rem', 
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          🥦 Plant-Based Treaty
+          100 Cafes Campaign and Plant-Based Treaty
         </h2>
-        <p style={{ 
-          color: '#E8D5FF', 
-          fontSize: '1.2rem', 
-          opacity: 0.9,
-          lineHeight: 1.6,
-          maxWidth: '800px',
-          margin: '0 auto'
-        }}>
-          The Plant Based Treaty is a grassroots campaign designed to put food systems 
-          at the center of combating the climate crisis. Explore our resources and 
-          learn how to support this important initiative.
-        </p>
       </div>
 
-      <div className="documents-section" style={{ marginBottom: '3rem' }}>
-        <h3 style={{ 
-          color: '#E8D5FF', 
-          fontSize: '2rem', 
-          marginBottom: '2rem',
-          textAlign: 'center',
+      {/* Plant-Based Treaty Section */}
+      <div className="plant-treaty-section" style={{ marginBottom: '4rem' }}>
+        <div style={{
+          background: '#F8F9FA',
+          border: '2px solid #F97316',
+          borderRadius: '12px',
+          padding: '2rem',
+          marginBottom: '2rem'
+        }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <IoGlobeOutline size={48} color="#F97316" />
+            <h3 style={{ 
+              color: '#1F2937', 
+              fontSize: '2rem', 
+              margin: 0,
+              fontWeight: '600'
+            }}>
+              Plant-Based Treaty
+            </h3>
+          </div>
+          <p style={{ 
+            color: '#374151', 
+            fontSize: '1.1rem',
+            lineHeight: 1.6,
+            marginBottom: '1rem'
+          }}>
+            The Plant Based Treaty is a grassroots campaign designed to put food systems 
+            at the center of combating the climate crisis.
+          </p>
+          <p style={{ 
+            color: '#374151', 
+            fontSize: '1.1rem',
+            lineHeight: 1.6
+          }}>
+            The Plant Based Treaty addresses emissions from animal agriculture and promotes the shift to plant-
+            based food systems as a critical solution to climate change.
+          </p>
+        </div>
+
+        <h4 style={{ 
+          color: '#1F2937', 
+          fontSize: '1.5rem', 
+          marginBottom: '1.5rem',
           fontWeight: '600'
         }}>
-          Available Resources
-        </h3>
+          Documents & Endorsements
+        </h4>
         
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '1.5rem'
+          gap: '1.5rem',
+          marginBottom: '2rem'
         }}>
           {documents.map((doc, index) => (
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #6366F1',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 display: 'flex',
@@ -148,7 +200,7 @@ const PlantBasedTreaty = ({ onNavigate }) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#E8D5FF';
+                e.currentTarget.style.borderColor = '#6366F1';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
@@ -159,7 +211,7 @@ const PlantBasedTreaty = ({ onNavigate }) => {
               )}
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
-                  color: '#E8D5FF', 
+                  color: '#1F2937', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '1.1rem',
                   fontWeight: '600'
@@ -167,8 +219,7 @@ const PlantBasedTreaty = ({ onNavigate }) => {
                   {doc.title}
                 </h4>
                 <p style={{ 
-                  color: '#E8D5FF', 
-                  opacity: 0.8,
+                  color: '#374151', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '0.9rem'
                 }}>
@@ -186,90 +237,217 @@ const PlantBasedTreaty = ({ onNavigate }) => {
             </div>
           ))}
         </div>
+
+        <h4 style={{ 
+          color: '#1F2937', 
+          fontSize: '1.5rem', 
+          marginBottom: '1.5rem',
+          fontWeight: '600'
+        }}>
+          External Resources
+        </h4>
+
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
+          gap: '1.5rem'
+        }}>
+          {externalLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                background: '#F8F9FA',
+                border: '2px solid #10B981',
+                borderRadius: '12px',
+                padding: '1.5rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '1rem',
+                textDecoration: 'none',
+                transition: 'all 0.3s ease'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.borderColor = '#059669';
+                e.currentTarget.style.transform = 'translateY(-2px)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.borderColor = '#10B981';
+                e.currentTarget.style.transform = 'translateY(0)';
+              }}
+            >
+              {link.type === 'video' ? (
+                <IoPlayOutline size={40} color="#10B981" />
+              ) : link.type === 'website' ? (
+                <IoGlobeOutline size={40} color="#10B981" />
+              ) : (
+                <IoDocumentTextOutline size={40} color="#10B981" />
+              )}
+              <div style={{ flex: 1 }}>
+                <h4 style={{ 
+                  color: '#1F2937', 
+                  margin: '0 0 0.5rem 0',
+                  fontSize: '1.1rem',
+                  fontWeight: '600'
+                }}>
+                  {link.title}
+                </h4>
+                <p style={{ 
+                  color: '#374151', 
+                  margin: 0,
+                  fontSize: '0.9rem'
+                }}>
+                  {link.description}
+                </p>
+              </div>
+              <IoLinkOutline size={24} color="#10B981" />
+            </a>
+          ))}
+        </div>
       </div>
 
-      <div className="info-section" style={{ marginBottom: '3rem' }}>
+      {/* 100 Cafes Campaign Section */}
+      <div className="cafe-campaign-section" style={{ marginBottom: '3rem' }}>
         <div style={{
-          background: '#1E1B4B',
-          border: '2px solid #F97316',
+          background: '#F8F9FA',
+          border: '2px solid #8B5CF6',
           borderRadius: '12px',
           padding: '2rem',
           textAlign: 'center'
         }}>
-          <IoGlobeOutline size={48} color="#F97316" style={{ marginBottom: '1rem' }} />
-          <h3 style={{ 
-            color: '#E8D5FF', 
-            fontSize: '1.8rem', 
-            marginBottom: '1rem',
-            fontWeight: '600'
-          }}>
-            About the Plant Based Treaty
-          </h3>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '1rem', marginBottom: '1.5rem' }}>
+            <IoCafeOutline size={48} color="#8B5CF6" />
+            <h3 style={{ 
+              color: '#1F2937', 
+              fontSize: '2rem', 
+              margin: 0,
+              fontWeight: '600'
+            }}>
+              100 Cafes Campaign
+            </h3>
+          </div>
+          
           <p style={{ 
-            color: '#E8D5FF', 
-            marginBottom: '1rem',
-            opacity: 0.9,
+            color: '#374151', 
             fontSize: '1.1rem',
-            lineHeight: 1.6
+            lineHeight: 1.6,
+            marginBottom: '2rem'
           }}>
-            The Plant Based Treaty addresses the urgent need to reduce emissions from animal 
-            agriculture and transition to more sustainable plant-based food systems. It calls 
-            for governments, organizations, and individuals to take action on climate-friendly 
-            food policies.
+            Our 100 Cafes Campaign works with local food businesses to implement sustainable practices, 
+            reduce food waste, and promote plant-based options. This grassroots initiative demonstrates 
+            how the food service industry can be a powerful force for environmental change.
           </p>
+
+          <div style={{
+            background: 'rgba(139, 92, 246, 0.1)',
+            border: '1px solid #8B5CF6',
+            borderRadius: '8px',
+            padding: '1.5rem',
+            marginBottom: '2rem'
+          }}>
+            <h4 style={{ 
+              color: '#1F2937', 
+              fontSize: '1.3rem', 
+              marginBottom: '1rem',
+              fontWeight: '600'
+            }}>
+              Café Food Waste Action Plan
+            </h4>
+            <p style={{ 
+              color: '#374151', 
+              fontSize: '1rem',
+              lineHeight: 1.6
+            }}>
+              We're developing comprehensive action plans to help cafés and restaurants reduce food waste, 
+              implement composting systems, source locally, and offer more plant-based menu options. 
+              These practical guidelines make it easier for food businesses to contribute to environmental 
+              sustainability while reducing costs.
+            </p>
+          </div>
+
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            gap: '1rem',
+            marginTop: '1.5rem'
+          }}>
+            <div style={{ padding: '1rem' }}>
+              <IoLeafOutline size={24} color="#8B5CF6" style={{ marginBottom: '0.5rem' }} />
+              <h5 style={{ color: '#1F2937', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Food Waste Reduction</h5>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
+                Strategies to minimize waste and maximize resource efficiency
+              </p>
+            </div>
+            <div style={{ padding: '1rem' }}>
+              <IoNutritionOutline size={24} color="#8B5CF6" style={{ marginBottom: '0.5rem' }} />
+              <h5 style={{ color: '#1F2937', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Plant-Based Options</h5>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
+                Menu development and customer education for sustainable choices
+              </p>
+            </div>
+            <div style={{ padding: '1rem' }}>
+              <IoCafeOutline size={24} color="#8B5CF6" style={{ marginBottom: '0.5rem' }} />
+              <h5 style={{ color: '#1F2937', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Local Sourcing</h5>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
+                Building relationships with local producers and suppliers
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
       <div className="contact-section" style={{ 
-        background: '#1E1B4B',
-        border: '2px solid #F97316',
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
       }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '1.5rem', 
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Support the Plant Based Treaty
+          Get Involved
         </h3>
         <p style={{ 
-          color: '#E8D5FF', 
-          marginBottom: '1.5rem',
-          opacity: 0.9
+          color: '#374151', 
+          marginBottom: '1.5rem'
         }}>
-          Want to learn more about supporting the Plant Based Treaty or organizing in your community?
+          Want to support the Plant Based Treaty or join our 100 Cafes Campaign? 
+          We'd love to help you get involved in creating sustainable food systems.
         </p>
         
         <a 
-          href="mailto:climate@indigoregen.com.au?subject=Plant Based Treaty Inquiry"
+          href="mailto:climate@indigoregen.com.au?subject=Plant Based Treaty & Cafes Campaign Inquiry"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#F97316',
+            color: '#6366F1',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(249, 115, 22, 0.1)',
+            background: 'rgba(99, 102, 241, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #F97316',
+            border: '2px solid #6366F1',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#F97316';
-            e.target.style.color = '#E8D5FF';
+            e.currentTarget.style.background = '#6366F1';
+            e.currentTarget.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(249, 115, 22, 0.1)';
-            e.target.style.color = '#F97316';
+            e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+            e.currentTarget.style.color = '#6366F1';
           }}
         >
           <IoMailOutline size={24} />
-          Contact Us About Plant Based Treaty
+          Contact Us About Climate Action
         </a>
       </div>
     </div>
