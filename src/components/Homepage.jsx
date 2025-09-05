@@ -10,7 +10,8 @@ import {
   IoBookOutline,
   IoShareSocialOutline,
   IoCarOutline,
-  IoArrowForwardOutline
+  IoArrowForwardOutline,
+  IoNutritionOutline
 } from 'react-icons/io5';
 
 const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
@@ -71,6 +72,13 @@ const Homepage = ({ onNavigate }) => {
       description: 'Find local community gardens, join PODS growing projects, and learn about sustainable food production.',
       color: '#7C3AED',
       onClick: () => onNavigate && onNavigate('gardens')
+    },
+    {
+      icon: IoNutritionOutline,
+      title: 'Composting Programs',
+      description: 'Join community composting hubs, learn home composting techniques, and reduce food waste.',
+      color: '#10B981',
+      onClick: () => onNavigate && onNavigate('composting')
     },
     {
       icon: IoCalendarOutline,
@@ -276,3 +284,5 @@ const Homepage = ({ onNavigate }) => {
 };
 
 export default Homepage;
+
+

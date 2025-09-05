@@ -7,6 +7,7 @@ import CommunityGardens from './components/CommunityGardens'
 import PermacultureResources from './components/PermacultureResources'
 import PlantBasedTreaty from './components/PlantBasedTreaty'
 import IndigoRegenDocs from './components/IndigoRegenDocs'
+import Composting from './components/Composting'
 import './App.css'
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
     // Check URL parameters on mount
     const urlParams = new URLSearchParams(window.location.search)
     const tab = urlParams.get('tab')
-    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs'].includes(tab)) {
+    if (tab && ['home', 'mission', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'indigodocs', 'composting'].includes(tab)) {
       setActiveTab(tab)
     }
   }, [])
@@ -56,6 +57,9 @@ function App() {
         break
       case 'indigodocs':
         handleTabChange('indigodocs')
+        break
+      case 'composting':
+        handleTabChange('composting')
         break
       default:
         handleTabChange('home')
@@ -104,6 +108,12 @@ function App() {
               Gardens
             </button>
             <button 
+              className={`tab-button ${activeTab === 'composting' ? 'active' : ''}`}
+              onClick={() => handleTabChange('composting')}
+            >
+              Composting
+            </button>
+            <button 
               className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
               onClick={() => handleTabChange('events')}
             >
@@ -147,6 +157,7 @@ function App() {
               {activeTab === 'home' ? 'Indigo Regen' : 
                activeTab === 'mission' ? 'Our Mission' : 
                activeTab === 'gardens' ? 'Community Gardens' :
+               activeTab === 'composting' ? 'Composting Programs' :
                activeTab === 'events' ? 'Events & Workshops' :
                activeTab === 'coolseats' ? 'Cool Seats' :
                activeTab === 'permaculture' ? 'Permaculture & Sustainability' :
@@ -165,6 +176,8 @@ function App() {
               <MissionStatement onAccept={handleAccept} onNavigate={handleNavigate} />
             ) : activeTab === 'gardens' ? (
               <CommunityGardens onNavigate={handleNavigate} />
+            ) : activeTab === 'composting' ? (
+              <Composting onNavigate={handleNavigate} />
             ) : activeTab === 'events' ? (
               <EventsWorkshops onNavigate={handleNavigate} />
             ) : activeTab === 'coolseats' ? (
