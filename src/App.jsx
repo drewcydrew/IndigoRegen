@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5'
 import MissionStatement from './components/MissionStatement'
 import Homepage from './components/Homepage'
 import EventsWorkshops from './components/EventsWorkshops'
@@ -15,6 +16,7 @@ import './App.css'
 function App() {
   const [missionAccepted, setMissionAccepted] = useState(false)
   const [activeTab, setActiveTab] = useState('home')
+  const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
   
   useEffect(() => {
     // Check URL parameters on mount
@@ -31,6 +33,7 @@ function App() {
 
   const handleTabChange = (tab) => {
     setActiveTab(tab)
+    setIsMobileNavOpen(false) // Close mobile nav when tab is selected
     // Update URL parameter
     const url = new URL(window.location)
     url.searchParams.set('tab', tab)
@@ -68,6 +71,33 @@ function App() {
     }
   }
 
+  const tabItems = [
+    { id: 'home', label: 'Home' },
+    { id: 'composting', label: 'Composting' },
+    { id: 'gardens', label: 'Community Gardens' },
+    { id: 'game', label: 'Play The Adaption Game' },
+    { id: 'permaculture', label: 'Permaculture' },
+    { id: 'coolseats', label: 'Cool Seats' },
+    { id: 'plantbased', label: 'Plant Based Treaty' },
+    { id: 'events', label: 'Events' },
+    { id: 'membership', label: 'Membership' }
+  ]
+
+  const getPageTitle = () => {
+    switch(activeTab) {
+      case 'home': return 'Indigo Regen'
+      case 'gardens': return 'Community Gardens'
+      case 'composting': return 'Composting Programs'
+      case 'events': return 'Events & Workshops'
+      case 'coolseats': return 'Cool Seats'
+      case 'permaculture': return 'Permaculture & Sustainability'
+      case 'plantbased': return 'Plant-Based Treaty'
+      case 'membership': return 'Membership'
+      case 'game': return 'Play The Adaption Game'
+      default: return 'Indigo Regen'
+    }
+  }
+
   if (missionAccepted) {
     return (
       <div className="accepted-container">
@@ -89,83 +119,52 @@ function App() {
   return (
     <div className="app-container">
       <div className="mission-container">
-        <div className="tab-header">
-          <div className="tab-buttons">
-            <button 
-              className={`tab-button ${activeTab === 'home' ? 'active' : ''}`}
-              onClick={() => handleTabChange('home')}
+        {/* Mobile Navigation Overlay */}
+        {isMobileNavOpen && (
+          <div className="mobile-nav-overlay" onClick={() => setIsMobileNavOpen(false)} />
+        )}
+        
+        {/* Side Navigation Panel */}
+        <div className={`side-nav ${isMobileNavOpen ? 'open' : ''}`}>
+          <div className="side-nav-header">
+            <h3 style={{ color: '#1F2937', margin: 0, fontSize: '1.2rem' }}>Navigation</h3>
+            <button
+              className="nav-close-btn"
+              onClick={() => setIsMobileNavOpen(false)}
             >
-              Home
+              <IoCloseOutline size={24} />
             </button>
-            <button 
-              className={`tab-button ${activeTab === 'composting' ? 'active' : ''}`}
-              onClick={() => handleTabChange('composting')}
-            >
-              Composting
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'gardens' ? 'active' : ''}`}
-              onClick={() => handleTabChange('gardens')}
-            >
-              Community Gardens
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'game' ? 'active' : ''}`}
-              onClick={() => handleTabChange('game')}
-            >
-              Play The Adaption Game
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'permaculture' ? 'active' : ''}`}
-              onClick={() => handleTabChange('permaculture')}
-            >
-              Permaculture
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'coolseats' ? 'active' : ''}`}
-              onClick={() => handleTabChange('coolseats')}
-            >
-              Cool Seats
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'plantbased' ? 'active' : ''}`}
-              onClick={() => handleTabChange('plantbased')}
-            >
-              Plant Based Treaty
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'events' ? 'active' : ''}`}
-              onClick={() => handleTabChange('events')}
-            >
-              Events
-            </button>
-            <button 
-              className={`tab-button ${activeTab === 'membership' ? 'active' : ''}`}
-              onClick={() => handleTabChange('membership')}
-            >
-              Membership
-            </button>
+          </div>
+          <div className="side-nav-items">
+            {tabItems.map((tab) => (
+              <button
+                key={tab.id}
+                className={`side-nav-item ${activeTab === tab.id ? 'active' : ''}`}
+                onClick={() => handleTabChange(tab.id)}
+              >
+                {tab.label}
+              </button>
+            ))}
           </div>
         </div>
 
-        <div className="modal-header">
-          <div className="modal-header-content">
+        {/* Main Header with Menu Button */}
+        <div className="main-header">
+          <button
+            className="mobile-menu-btn"
+            onClick={() => setIsMobileNavOpen(true)}
+          >
+            <IoMenuOutline size={24} />
+          </button>
+          
+          <div className="header-content">
             <img 
               src="/indigo-regen-icon.jpg" 
               alt="Indigo Regen Logo" 
-              className="modal-logo"
+              className="header-logo"
             />
-            <h1 className="modal-title">
-              {activeTab === 'home' ? 'Indigo Regen' : 
-               activeTab === 'gardens' ? 'Community Gardens' :
-               activeTab === 'composting' ? 'Composting Programs' :
-               activeTab === 'events' ? 'Events & Workshops' :
-               activeTab === 'coolseats' ? 'Cool Seats' :
-               activeTab === 'permaculture' ? 'Permaculture & Sustainability' :
-               activeTab === 'plantbased' ? 'Plant-Based Treaty' :
-               activeTab === 'membership' ? 'Membership' :
-               activeTab === 'game' ? 'Play The Adaption Game' :
-               'Indigo Regen'}
+            <h1 className="header-title">
+              {getPageTitle()}
             </h1>
           </div>
         </div>
