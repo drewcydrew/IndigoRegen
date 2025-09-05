@@ -282,16 +282,17 @@
   
   .side-nav {
     position: static;
-    width: auto;
+    width: 100%;
     height: auto;
     background: #F8F9FA;
     border: none;
     box-shadow: none;
     flex-direction: row;
     justify-content: center;
-    padding: 1rem 0;
+    padding: 0;
     border-bottom: 2px solid #6366F1;
-    margin-top: 0;
+    margin: 0;
+    left: 0;
   }
   
   .side-nav-header {
@@ -299,16 +300,19 @@
   }
   
   .side-nav-items {
-    display: flex;
-    flex-direction: row;
+    display: flex !important;
+    flex-direction: row !important;
     gap: 0;
     padding: 0;
     flex-wrap: wrap;
     justify-content: center;
     overflow: visible;
+    width: 100%;
   }
   
   .side-nav-item {
+    display: block !important;
+    width: auto !important;
     background: transparent;
     color: #6366F1;
     border: 2px solid #6366F1;
@@ -324,6 +328,7 @@
     font-weight: 500;
     cursor: pointer;
     transition: all 0.25s;
+    flex-shrink: 0;
   }
   
   .side-nav-item:first-child {
