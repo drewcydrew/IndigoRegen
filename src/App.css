@@ -7,19 +7,19 @@
 
 .app-container {
   min-height: 100vh;
-  background-color: #2D1B69;
+  background-color: #FFFFFF;
 }
 
 .privacy-container {
   width: 100%;
-  background: #1E1B4B;
+  background: #F8F9FA;
   min-height: 100vh;
 }
 
 .tab-header {
   padding: 1rem 2rem;
-  border-bottom: 2px solid #E8D5FF;
-  background-color: #1E1B4B;
+  border-bottom: 2px solid #6366F1;
+  background-color: #F8F9FA;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -34,8 +34,8 @@
 
 .tab-button {
   background: transparent;
-  color: #7C3AED;
-  border: 2px solid #E8D5FF;
+  color: #6366F1;
+  border: 2px solid #6366F1;
   border-bottom: none;
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
@@ -53,15 +53,15 @@
 }
 
 .tab-button:hover {
-  background-color: #7C3AED;
-  color: #1E1B4B;
+  background-color: #6366F1;
+  color: #FFFFFF;
 }
 
 .tab-button.active {
-  background-color: #E8D5FF;
-  color: #1E1B4B;
-  border-color: #E8D5FF;
-  border-bottom: 2px solid #1E1B4B;
+  background-color: #1F2937;
+  color: #FFFFFF;
+  border-color: #1F2937;
+  border-bottom: 2px solid #F8F9FA;
 }
 
 .tab-button.active::after {
@@ -71,12 +71,12 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #1E1B4B;
+  background: #F8F9FA;
 }
 
 .modal-header {
   padding: 2rem 2rem 1rem;
-  background-color: #1E1B4B;
+  background-color: #F8F9FA;
 }
 
 .modal-header-content {
@@ -92,21 +92,21 @@
   height: 80px;
   object-fit: contain;
   border-radius: 12px;
-  border: 2px solid #E8D5FF;
+  border: 2px solid #6366F1;
   padding: 0.5rem;
-  background-color: rgba(232, 213, 255, 0.1);
+  background-color: rgba(99, 102, 241, 0.1);
 }
 
 .modal-title {
   margin: 0;
   font-size: 2.5rem;
   font-weight: 700;
-  color: #E8D5FF;
+  color: #1F2937;
   text-align: center;
 }
 
 .scroll-content {
-  background-color: #1E1B4B;
+  background-color: #F8F9FA;
   padding-bottom: 2rem;
 }
 
@@ -116,7 +116,7 @@
 
 .last-updated {
   font-size: 0.9rem;
-  color: #7C3AED;
+  color: #6366F1;
   margin-bottom: 1.5rem;
   font-style: italic;
 }
@@ -125,7 +125,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 2rem;
-  color: #E8D5FF;
+  color: #1F2937;
 }
 
 .section {
@@ -137,13 +137,13 @@
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  color: #E8D5FF;
+  color: #1F2937;
 }
 
 .paragraph {
   line-height: 1.6;
   margin-bottom: 1rem;
-  color: #E8D5FF;
+  color: #1F2937;
 }
 
 .bullet-points {
@@ -153,7 +153,7 @@
 .bullet-point {
   line-height: 1.6;
   margin-bottom: 0.5rem;
-  color: #E8D5FF;
+  color: #1F2937;
   padding-left: 1rem;
 }
 
@@ -161,13 +161,13 @@
   text-align: center;
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 2px solid #E8D5FF;
+  border-top: 2px solid #6366F1;
 }
 
 .accept-button {
-  background: #E8D5FF;
-  color: #1E1B4B;
-  border: 2px solid #E8D5FF;
+  background: #1F2937;
+  color: #FFFFFF;
+  border: 2px solid #1F2937;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-size: 1.1rem;
@@ -177,15 +177,15 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  box-shadow: 0 4px 15px rgba(232, 213, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(31, 41, 55, 0.3);
 }
 
 .accept-button:hover {
   transform: translateY(-2px);
-  background: #7C3AED;
-  border-color: #7C3AED;
-  color: #E8D5FF;
-  box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+  background: #6366F1;
+  border-color: #6366F1;
+  color: #FFFFFF;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
 }
 
 .checkmark {
@@ -195,7 +195,7 @@
 .accepted-container {
   text-align: center;
   padding: 3rem;
-  background: #1E1B4B;
+  background: #F8F9FA;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -204,14 +204,14 @@
 }
 
 .accepted-container h1 {
-  color: #E8D5FF;
+  color: #1F2937;
   margin-bottom: 1rem;
 }
 
 .accepted-container p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  color: #E8D5FF;
+  color: #1F2937;
 }
 
 .logo {
@@ -252,8 +252,8 @@
 
 .tab-header {
   padding: 1rem 2rem;
-  border-bottom: 2px solid #E8D5FF;
-  background-color: #1E1B4B;
+  border-bottom: 2px solid #6366F1;
+  background-color: #F8F9FA;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -268,8 +268,8 @@
 
 .tab-button {
   background: transparent;
-  color: #7C3AED;
-  border: 2px solid #E8D5FF;
+  color: #6366F1;
+  border: 2px solid #6366F1;
   border-bottom: none;
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
@@ -287,15 +287,15 @@
 }
 
 .tab-button:hover {
-  background-color: #7C3AED;
-  color: #1E1B4B;
+  background-color: #6366F1;
+  color: #FFFFFF;
 }
 
 .tab-button.active {
-  background-color: #E8D5FF;
-  color: #1E1B4B;
-  border-color: #E8D5FF;
-  border-bottom: 2px solid #1E1B4B;
+  background-color: #1F2937;
+  color: #FFFFFF;
+  border-color: #1F2937;
+  border-bottom: 2px solid #F8F9FA;
 }
 
 .tab-button.active::after {
@@ -305,7 +305,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background: #1E1B4B;
+  background: #F8F9FA;
 }
 
 .video-section {
@@ -318,14 +318,14 @@
   aspect-ratio: 16 / 9;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   background-color: #000;
-  border: 2px solid #E8D5FF;
+  border: 2px solid #6366F1;
 }
 
 .video-caption {
   font-size: 0.9rem;
-  color: #7C3AED;
+  color: #6366F1;
   margin-top: 0.5rem;
   font-style: italic;
 }

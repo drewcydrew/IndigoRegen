@@ -123,8 +123,8 @@ const CommunityGardens = ({ onNavigate }) => {
           onClick={() => onNavigate && onNavigate('home')}
           style={{
             background: 'transparent',
-            color: '#7C3AED',
-            border: '2px solid #7C3AED',
+            color: '#6366F1',
+            border: '2px solid #6366F1',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
             cursor: 'pointer',
@@ -136,12 +136,12 @@ const CommunityGardens = ({ onNavigate }) => {
             gap: '0.5rem'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
-            e.target.style.color = '#E8D5FF';
+            e.target.style.background = '#6366F1';
+            e.target.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
             e.target.style.background = 'transparent';
-            e.target.style.color = '#7C3AED';
+            e.target.style.color = '#6366F1';
           }}
         >
           <IoArrowBackOutline size={20} />
@@ -154,7 +154,7 @@ const CommunityGardens = ({ onNavigate }) => {
         marginBottom: '3rem' 
       }}>
         <h2 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2.5rem', 
           marginBottom: '1rem',
           fontWeight: '700'
@@ -162,9 +162,8 @@ const CommunityGardens = ({ onNavigate }) => {
           Community Gardens
         </h2>
         <p style={{ 
-          color: '#E8D5FF', 
+          color: '#374151', 
           fontSize: '1.2rem', 
-          opacity: 0.9,
           lineHeight: 1.6,
           maxWidth: '800px',
           margin: '0 auto'
@@ -181,7 +180,7 @@ const CommunityGardens = ({ onNavigate }) => {
         marginBottom: '3rem' 
       }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           fontWeight: '600'
@@ -191,8 +190,8 @@ const CommunityGardens = ({ onNavigate }) => {
         <div style={{
           maxWidth: '800px',
           margin: '0 auto',
-          background: '#1E1B4B',
-          border: '2px solid #7C3AED',
+          background: '#F8F9FA',
+          border: '2px solid #6366F1',
           borderRadius: '12px',
           padding: '1rem',
           overflow: 'hidden'
@@ -222,7 +221,7 @@ const CommunityGardens = ({ onNavigate }) => {
 
       <div className="features-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -239,7 +238,7 @@ const CommunityGardens = ({ onNavigate }) => {
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
+                background: '#F8F9FA',
                 border: `2px solid ${resource.color}`,
                 borderRadius: '12px',
                 padding: '1.5rem',
@@ -248,7 +247,7 @@ const CommunityGardens = ({ onNavigate }) => {
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-4px)';
-                e.currentTarget.style.boxShadow = `0 8px 25px rgba(124, 58, 237, 0.3)`;
+                e.currentTarget.style.boxShadow = `0 8px 25px rgba(99, 102, 241, 0.2)`;
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -256,8 +255,8 @@ const CommunityGardens = ({ onNavigate }) => {
               }}
             >
               <resource.icon size={48} color={resource.color} style={{ marginBottom: '1rem' }} />
-              <h4 style={{ color: '#E8D5FF', marginBottom: '1rem', fontSize: '1.2rem' }}>{resource.title}</h4>
-              <p style={{ color: '#E8D5FF', opacity: 0.9, margin: 0 }}>
+              <h4 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.2rem' }}>{resource.title}</h4>
+              <p style={{ color: '#374151', margin: 0 }}>
                 {resource.description}
               </p>
             </div>
@@ -267,7 +266,7 @@ const CommunityGardens = ({ onNavigate }) => {
 
       <div className="documents-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -286,8 +285,8 @@ const CommunityGardens = ({ onNavigate }) => {
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #6366F1',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 display: 'flex',
@@ -298,18 +297,18 @@ const CommunityGardens = ({ onNavigate }) => {
               }}
               onClick={() => handleDownload(doc.filename)}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#7C3AED';
+                e.currentTarget.style.borderColor = '#4F46E5';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#E8D5FF';
+                e.currentTarget.style.borderColor = '#6366F1';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
-              <IoDocumentTextOutline size={40} color="#7C3AED" />
+              <IoDocumentTextOutline size={40} color="#6366F1" />
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
-                  color: '#E8D5FF', 
+                  color: '#1F2937', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '1.1rem',
                   fontWeight: '600'
@@ -317,22 +316,21 @@ const CommunityGardens = ({ onNavigate }) => {
                   {doc.title}
                 </h4>
                 <p style={{ 
-                  color: '#E8D5FF', 
-                  opacity: 0.8,
+                  color: '#374151', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '0.9rem'
                 }}>
                   {doc.description}
                 </p>
                 <span style={{ 
-                  color: '#7C3AED', 
+                  color: '#6366F1', 
                   fontSize: '0.8rem',
                   fontWeight: '500'
                 }}>
                   {doc.size}
                 </span>
               </div>
-              <IoDownloadOutline size={24} color="#7C3AED" />
+              <IoDownloadOutline size={24} color="#6366F1" />
             </div>
           ))}
         </div>
@@ -340,7 +338,7 @@ const CommunityGardens = ({ onNavigate }) => {
 
       <div className="gardens-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -358,24 +356,24 @@ const CommunityGardens = ({ onNavigate }) => {
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #6366F1',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#7C3AED';
+                e.currentTarget.style.borderColor = '#4F46E5';
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#E8D5FF';
+                e.currentTarget.style.borderColor = '#6366F1';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
                 <h4 style={{ 
-                  color: '#E8D5FF', 
+                  color: '#1F2937', 
                   margin: 0,
                   fontSize: '1.3rem',
                   fontWeight: '600'
@@ -383,28 +381,27 @@ const CommunityGardens = ({ onNavigate }) => {
                   {garden.name}
                 </h4>
                 <span style={{ 
-                  color: garden.status.includes('Available') ? '#10B981' : garden.status.includes('Needed') ? '#F59E0B' : '#7C3AED',
+                  color: garden.status.includes('Available') ? '#10B981' : garden.status.includes('Needed') ? '#F59E0B' : '#6366F1',
                   fontSize: '0.8rem',
                   fontWeight: '500',
-                  background: garden.status.includes('Available') ? 'rgba(16, 185, 129, 0.1)' : garden.status.includes('Needed') ? 'rgba(245, 158, 11, 0.1)' : 'rgba(124, 58, 237, 0.1)',
+                  background: garden.status.includes('Available') ? 'rgba(16, 185, 129, 0.1)' : garden.status.includes('Needed') ? 'rgba(245, 158, 11, 0.1)' : 'rgba(99, 102, 241, 0.1)',
                   padding: '0.25rem 0.5rem',
                   borderRadius: '4px',
-                  border: `1px solid ${garden.status.includes('Available') ? '#10B981' : garden.status.includes('Needed') ? '#F59E0B' : '#7C3AED'}`
+                  border: `1px solid ${garden.status.includes('Available') ? '#10B981' : garden.status.includes('Needed') ? '#F59E0B' : '#6366F1'}`
                 }}>
                   {garden.status}
                 </span>
               </div>
               
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                <IoLocationOutline size={16} color="#7C3AED" />
-                <span style={{ color: '#E8D5FF', fontSize: '0.9rem', opacity: 0.9 }}>
+                <IoLocationOutline size={16} color="#6366F1" />
+                <span style={{ color: '#374151', fontSize: '0.9rem' }}>
                   {garden.location}
                 </span>
               </div>
               
               <p style={{ 
-                color: '#E8D5FF', 
-                opacity: 0.9,
+                color: '#374151', 
                 margin: '0 0 1rem 0',
                 fontSize: '1rem',
                 lineHeight: 1.5
@@ -413,10 +410,10 @@ const CommunityGardens = ({ onNavigate }) => {
               </p>
               
               <div style={{ marginBottom: '1rem' }}>
-                <h5 style={{ color: '#E8D5FF', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Features:</h5>
+                <h5 style={{ color: '#1F2937', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>Features:</h5>
                 <ul style={{ margin: 0, paddingLeft: '1rem' }}>
                   {garden.features.map((feature, idx) => (
-                    <li key={idx} style={{ color: '#E8D5FF', opacity: 0.9, fontSize: '0.9rem', marginBottom: '0.25rem' }}>
+                    <li key={idx} style={{ color: '#374151', fontSize: '0.9rem', marginBottom: '0.25rem' }}>
                       {feature}
                     </li>
                   ))}
@@ -429,23 +426,23 @@ const CommunityGardens = ({ onNavigate }) => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.5rem',
-                  color: '#7C3AED',
+                  color: '#6366F1',
                   textDecoration: 'none',
                   fontSize: '0.9rem',
                   fontWeight: '500',
                   padding: '0.5rem 1rem',
-                  border: '2px solid #7C3AED',
+                  border: '2px solid #6366F1',
                   borderRadius: '6px',
                   transition: 'all 0.3s ease',
                   marginRight: garden.website ? '1rem' : '0'
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.background = '#7C3AED';
-                  e.currentTarget.style.color = '#E8D5FF';
+                  e.currentTarget.style.background = '#6366F1';
+                  e.currentTarget.style.color = '#FFFFFF';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = '#7C3AED';
+                  e.currentTarget.style.color = '#6366F1';
                 }}
               >
                 <IoMailOutline size={16} />
@@ -490,7 +487,7 @@ const CommunityGardens = ({ onNavigate }) => {
 
       <div className="pods-info-section" style={{ marginBottom: '3rem' }}>
         <div style={{
-          background: '#1E1B4B',
+          background: '#F8F9FA',
           border: '2px solid #10B981',
           borderRadius: '12px',
           padding: '2rem',
@@ -498,7 +495,7 @@ const CommunityGardens = ({ onNavigate }) => {
         }}>
           <IoMapOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
           <h3 style={{ 
-            color: '#E8D5FF', 
+            color: '#1F2937', 
             fontSize: '1.8rem', 
             marginBottom: '1rem',
             fontWeight: '600'
@@ -506,9 +503,8 @@ const CommunityGardens = ({ onNavigate }) => {
             PODS Projects
           </h3>
           <p style={{ 
-            color: '#E8D5FF', 
+            color: '#374151', 
             marginBottom: '1rem',
-            opacity: 0.9,
             fontSize: '1.1rem',
             lineHeight: 1.6
           }}>
@@ -524,22 +520,22 @@ const CommunityGardens = ({ onNavigate }) => {
           }}>
             <div style={{ padding: '1rem' }}>
               <IoTimeOutline size={24} color="#10B981" style={{ marginBottom: '0.5rem' }} />
-              <h4 style={{ color: '#E8D5FF', margin: '0 0 0.5rem 0' }}>Flexible Setup</h4>
-              <p style={{ color: '#E8D5FF', opacity: 0.8, fontSize: '0.9rem', margin: 0 }}>
+              <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>Flexible Setup</h4>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
                 Mobile systems that can be moved to different community locations
               </p>
             </div>
             <div style={{ padding: '1rem' }}>
               <IoPeopleOutline size={24} color="#10B981" style={{ marginBottom: '0.5rem' }} />
-              <h4 style={{ color: '#E8D5FF', margin: '0 0 0.5rem 0' }}>Community Led</h4>
-              <p style={{ color: '#E8D5FF', opacity: 0.8, fontSize: '0.9rem', margin: 0 }}>
+              <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>Community Led</h4>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
                 Managed by local volunteers with regular workshops and events
               </p>
             </div>
             <div style={{ padding: '1rem' }}>
               <IoLeafOutline size={24} color="#10B981" style={{ marginBottom: '0.5rem' }} />
-              <h4 style={{ color: '#E8D5FF', margin: '0 0 0.5rem 0' }}>Educational</h4>
-              <p style={{ color: '#E8D5FF', opacity: 0.8, fontSize: '0.9rem', margin: 0 }}>
+              <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>Educational</h4>
+              <p style={{ color: '#374151', fontSize: '0.9rem', margin: 0 }}>
                 Demonstrate sustainable growing techniques and permaculture principles
               </p>
             </div>
@@ -548,14 +544,14 @@ const CommunityGardens = ({ onNavigate }) => {
       </div>
 
       <div className="contact-section" style={{ 
-        background: '#1E1B4B',
-        border: '2px solid #7C3AED',
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
       }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '1.5rem', 
           marginBottom: '1rem',
           fontWeight: '600'
@@ -563,9 +559,8 @@ const CommunityGardens = ({ onNavigate }) => {
           Ready to Grow with Us?
         </h3>
         <p style={{ 
-          color: '#E8D5FF', 
-          marginBottom: '1.5rem',
-          opacity: 0.9
+          color: '#374151', 
+          marginBottom: '1.5rem'
         }}>
           Whether you're interested in getting a garden plot, volunteering, or learning 
           about sustainable growing, we'd love to connect with you!
@@ -577,23 +572,23 @@ const CommunityGardens = ({ onNavigate }) => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#7C3AED',
+            color: '#6366F1',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(124, 58, 237, 0.1)',
+            background: 'rgba(99, 102, 241, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #7C3AED',
+            border: '2px solid #6366F1',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#7C3AED';
-            e.currentTarget.style.color = '#E8D5FF';
+            e.currentTarget.style.background = '#6366F1';
+            e.currentTarget.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(124, 58, 237, 0.1)';
-            e.currentTarget.style.color = '#7C3AED';
+            e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+            e.currentTarget.style.color = '#6366F1';
           }}
         >
           <IoMailOutline size={24} />

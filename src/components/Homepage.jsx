@@ -19,7 +19,7 @@ const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
       className="quick-link-card"
       onClick={onClick}
       style={{
-        background: '#1E1B4B',
+        background: '#F8F9FA',
         border: `2px solid ${color}`,
         borderRadius: '12px',
         padding: '1.5rem',
@@ -35,7 +35,7 @@ const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
       }}
       onMouseEnter={(e) => {
         e.currentTarget.style.transform = 'translateY(-4px)';
-        e.currentTarget.style.boxShadow = `0 8px 25px rgba(124, 58, 237, 0.3)`;
+        e.currentTarget.style.boxShadow = `0 8px 25px rgba(99, 102, 241, 0.2)`;
       }}
       onMouseLeave={(e) => {
         e.currentTarget.style.transform = 'translateY(0)';
@@ -45,7 +45,7 @@ const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
       <Icon size={48} color={color} />
       <h3 style={{ 
         margin: 0, 
-        color: '#E8D5FF', 
+        color: '#1F2937', 
         fontSize: '1.3rem',
         fontWeight: '600'
       }}>
@@ -53,9 +53,8 @@ const QuickLinkCard = ({ icon: Icon, title, description, color, onClick }) => {
       </h3>
       <p style={{ 
         margin: 0, 
-        color: '#E8D5FF', 
+        color: '#374151', 
         fontSize: '0.95rem',
-        opacity: 0.9,
         lineHeight: 1.5
       }}>
         {description}
@@ -123,7 +122,7 @@ const Homepage = ({ onNavigate }) => {
         padding: '0 1rem'
       }}>
         <h1 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '3rem', 
           marginBottom: '1.5rem',
           fontWeight: '700'
@@ -131,17 +130,24 @@ const Homepage = ({ onNavigate }) => {
           Welcome to Indigo Regen
         </h1>
         <p style={{ 
-          color: '#E8D5FF', 
+          color: '#374151', 
           fontSize: '1.3rem', 
-          opacity: 0.9,
           lineHeight: 1.6,
           maxWidth: '900px',
           margin: '0 auto 2rem auto'
         }}>
           Creating and celebrating regenerative practices that nurture the health of 
-          local communities and our planet. We believe that meaningful change happens 
-          when communities come together to share knowledge, resources, and hope for 
-          a sustainable future.
+          local communities, biodiversity and our planet.
+        </p>
+        <p style={{ 
+          color: '#374151', 
+          fontSize: '1.3rem', 
+          lineHeight: 1.6,
+          maxWidth: '900px',
+          margin: '0 auto 2rem auto'
+        }}>
+          We believe that meaningful change happens when communities come 
+          together to share knowledge, resources, and hope for a sustainable future.
         </p>
         
         <div style={{
@@ -153,9 +159,9 @@ const Homepage = ({ onNavigate }) => {
         }}>
           <button 
             style={{
-              background: '#7C3AED',
-              color: '#E8D5FF',
-              border: '2px solid #7C3AED',
+              background: '#6366F1',
+              color: '#FFFFFF',
+              border: '2px solid #6366F1',
               padding: '1rem 2rem',
               borderRadius: '8px',
               fontSize: '1.1rem',
@@ -168,76 +174,17 @@ const Homepage = ({ onNavigate }) => {
             }}
             onClick={() => onNavigate && onNavigate('mission')}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#E8D5FF';
-              e.currentTarget.style.color = '#1E1B4B';
+              e.currentTarget.style.background = '#1F2937';
+              e.currentTarget.style.borderColor = '#1F2937';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#7C3AED';
-              e.currentTarget.style.color = '#E8D5FF';
+              e.currentTarget.style.background = '#6366F1';
+              e.currentTarget.style.borderColor = '#6366F1';
             }}
           >
             Read Our Full Mission
             <IoArrowForwardOutline size={20} />
           </button>
-        </div>
-      </div>
-
-      {/* Values Highlight */}
-      <div className="values-section" style={{ 
-        marginBottom: '4rem',
-        padding: '0 1rem'
-      }}>
-        <h2 style={{ 
-          color: '#E8D5FF', 
-          fontSize: '2.2rem', 
-          marginBottom: '2rem',
-          textAlign: 'center',
-          fontWeight: '600'
-        }}>
-          Our Core Values
-        </h2>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-          gap: '1.5rem',
-          marginBottom: '2rem'
-        }}>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #7C3AED',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <h3 style={{ color: '#E8D5FF', margin: '0 0 1rem 0' }}>Respect & Integrity</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9, margin: 0 }}>
-              For people, nature, and traditional knowledge, acting authentically and transparently
-            </p>
-          </div>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #10B981',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <h3 style={{ color: '#E8D5FF', margin: '0 0 1rem 0' }}>Kindness & Inclusivity</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9, margin: 0 }}>
-              Approaching all interactions with compassion, welcoming all voices and perspectives
-            </p>
-          </div>
-          <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #F59E0B',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <h3 style={{ color: '#E8D5FF', margin: '0 0 1rem 0' }}>Future Focus & Sustainability</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9, margin: 0 }}>
-              Making decisions for generations to come, living within planetary boundaries
-            </p>
-          </div>
         </div>
       </div>
 
@@ -247,7 +194,7 @@ const Homepage = ({ onNavigate }) => {
         padding: '0 1rem'
       }}>
         <h2 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2.2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -275,8 +222,8 @@ const Homepage = ({ onNavigate }) => {
 
       {/* Contact Section */}
       <div className="footer-section" style={{
-        background: '#1E1B4B',
-        border: '2px solid #E8D5FF',
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
         borderRadius: '12px',
         padding: '2rem',
         margin: '0 1rem',
@@ -287,7 +234,7 @@ const Homepage = ({ onNavigate }) => {
           paddingTop: '0'
         }}>
           <p style={{ 
-            color: '#E8D5FF', 
+            color: '#1F2937', 
             fontSize: '1.1rem',
             margin: '0 0 1rem 0',
             fontWeight: '500'
@@ -300,23 +247,23 @@ const Homepage = ({ onNavigate }) => {
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              color: '#7C3AED',
+              color: '#6366F1',
               textDecoration: 'none',
               fontSize: '1.1rem',
               fontWeight: '500',
-              background: 'rgba(124, 58, 237, 0.1)',
+              background: 'rgba(99, 102, 241, 0.1)',
               padding: '0.75rem 1.5rem',
               borderRadius: '8px',
-              border: '2px solid #7C3AED',
+              border: '2px solid #6366F1',
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#7C3AED';
-              e.currentTarget.style.color = '#E8D5FF';
+              e.currentTarget.style.background = '#6366F1';
+              e.currentTarget.style.color = '#FFFFFF';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(124, 58, 237, 0.1)';
-              e.currentTarget.style.color = '#7C3AED';
+              e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+              e.currentTarget.style.color = '#6366F1';
             }}
           >
             <IoMailOutline size={24} />
