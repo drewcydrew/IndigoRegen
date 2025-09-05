@@ -220,34 +220,34 @@ const Homepage = ({ onNavigate }) => {
           }}>
             Ready to join our regenerative community?
           </p>
-          <a 
-            href="mailto:hello@indigoregen.com.au?subject=General Inquiry"
+          <button 
+            onClick={() => onNavigate && onNavigate('membership')}
             style={{
               display: 'inline-flex',
               alignItems: 'center',
               gap: '0.5rem',
-              color: '#6366F1',
-              textDecoration: 'none',
+              color: '#FFFFFF',
+              backgroundColor: '#6366F1',
+              border: '2px solid #6366F1',
               fontSize: '1.1rem',
               fontWeight: '500',
-              background: 'rgba(99, 102, 241, 0.1)',
               padding: '0.75rem 1.5rem',
               borderRadius: '8px',
-              border: '2px solid #6366F1',
+              cursor: 'pointer',
               transition: 'all 0.3s ease'
             }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#6366F1';
-              e.currentTarget.style.color = '#FFFFFF';
+              e.currentTarget.style.background = '#1F2937';
+              e.currentTarget.style.borderColor = '#1F2937';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
-              e.currentTarget.style.color = '#6366F1';
+              e.currentTarget.style.background = '#6366F1';
+              e.currentTarget.style.borderColor = '#6366F1';
             }}
           >
-            <IoMailOutline size={24} />
-            Get In Touch
-          </a>
+            <IoPeopleOutline size={24} />
+            Join Us
+          </button>
         </div>
       </div>
     </div>
