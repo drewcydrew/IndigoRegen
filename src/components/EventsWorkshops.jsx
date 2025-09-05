@@ -16,37 +16,16 @@ import {
 const EventsWorkshops = ({ onNavigate }) => {
   const documents = [
     {
-      title: "Summit of Food Waste 2025 May",
-      description: "Documentation and findings from the Food Waste Summit held in May 2025",
+      title: "Summit of Food Waste 2025 May - Michael Mobbs",
+      description: "Documentation and findings from the Food Waste Summit featuring Michael Mobbs",
       filename: "summit of food waste 2025 May.pdf",
       size: "3.4 MB"
     },
     {
       title: "Summit of Food Waste 2025 May (Alternative)",
-      description: "Additional documentation from the Food Waste Summit",
+      description: "Alternative documentation from the Food Waste Summit",
       filename: "summit of food waste 2025 May (1).pdf",
       size: "3.4 MB"
-    }
-  ];
-
-  const upcomingEvents = [
-    {
-      title: "Community Composting Workshop",
-      description: "Learn hands-on techniques for composting at home and in community spaces",
-      date: "August 15, 2025",
-      time: "10:00 AM - 2:00 PM",
-      location: "Community Garden Center",
-      capacity: "25 participants",
-      type: "Workshop"
-    },
-    {
-      title: "Sustainable Living Seminar",
-      description: "Explore practical strategies for reducing environmental impact in daily life",
-      date: "September 8, 2025",
-      time: "6:00 PM - 8:00 PM",
-      location: "Local Community Hall",
-      capacity: "50 participants",
-      type: "Seminar"
     }
   ];
 
@@ -55,20 +34,15 @@ const EventsWorkshops = ({ onNavigate }) => {
       title: "Cool Seats Installation Workshop",
       description: "Hands-on training for installing and maintaining Cool Seats in communities",
       date: "June 20, 2025",
-      attendees: "18 participants"
+      participants: "18"
     },
     {
       title: "Regenerative Agriculture Talk",
       description: "Expert presentation on soil health and sustainable farming practices",
       date: "May 15, 2025",
-      attendees: "35 participants"
+      participants: "35"
     }
   ];
-
-  const handleEventInquiry = () => {
-    const mailtoLink = "mailto:events@indigoregen.com.au?subject=Event Inquiry&body=Hello Indigo Regen Team,%0D%0A%0D%0AI'm interested in learning more about your upcoming events and workshops.%0D%0A%0D%0APlease provide information about:%0D%0A- Upcoming workshop dates%0D%0A- Registration process%0D%0A- Event locations%0D%0A%0D%0AThank you!";
-    window.location.href = mailtoLink;
-  };
 
   const handleDownload = (filename) => {
     const link = document.createElement('a');
@@ -90,8 +64,8 @@ const EventsWorkshops = ({ onNavigate }) => {
           onClick={() => onNavigate && onNavigate('home')}
           style={{
             background: 'transparent',
-            color: '#7C3AED',
-            border: '2px solid #7C3AED',
+            color: '#6366F1',
+            border: '2px solid #6366F1',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
             cursor: 'pointer',
@@ -103,12 +77,12 @@ const EventsWorkshops = ({ onNavigate }) => {
             gap: '0.5rem'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
-            e.target.style.color = '#E8D5FF';
+            e.target.style.background = '#6366F1';
+            e.target.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
             e.target.style.background = 'transparent';
-            e.target.style.color = '#7C3AED';
+            e.target.style.color = '#6366F1';
           }}
         >
           <IoArrowBackOutline size={20} />
@@ -121,7 +95,7 @@ const EventsWorkshops = ({ onNavigate }) => {
         marginBottom: '3rem' 
       }}>
         <h2 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2.5rem', 
           marginBottom: '1rem',
           fontWeight: '700'
@@ -129,9 +103,8 @@ const EventsWorkshops = ({ onNavigate }) => {
           Events & Workshops
         </h2>
         <p style={{ 
-          color: '#E8D5FF', 
+          color: '#374151', 
           fontSize: '1.2rem', 
-          opacity: 0.9,
           lineHeight: 1.6,
           maxWidth: '800px',
           margin: '0 auto'
@@ -142,82 +115,88 @@ const EventsWorkshops = ({ onNavigate }) => {
         </p>
       </div>
 
-      <div className="features-section" style={{ marginBottom: '3rem' }}>
+      <div className="why-attend-section" style={{ marginBottom: '3rem' }}>
+        <h3 style={{ 
+          color: '#1F2937', 
+          fontSize: '2rem', 
+          marginBottom: '2rem',
+          textAlign: 'center',
+          fontWeight: '600'
+        }}>
+          Why Attend?
+        </h3>
+        
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '2rem'
         }}>
           <div style={{
-            background: '#1E1B4B',
-            border: '2px solid #7C3AED',
+            background: '#F8F9FA',
+            border: '2px solid #6366F1',
             borderRadius: '12px',
             padding: '1.5rem',
             textAlign: 'center'
           }}>
-            <IoBookOutline size={48} color="#7C3AED" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Educational Workshops</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Hands-on learning experiences covering composting, permaculture, 
-              sustainable living practices, and environmental restoration techniques.
+            <IoBookOutline size={48} color="#6366F1" style={{ marginBottom: '1rem' }} />
+            <h4 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Educational Workshops</h4>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Hands-on learning experiences on composting, permaculture, and sustainable living.
             </p>
           </div>
 
           <div style={{
-            background: '#1E1B4B',
+            background: '#F8F9FA',
             border: '2px solid #10B981',
             borderRadius: '12px',
             padding: '1.5rem',
             textAlign: 'center'
           }}>
             <IoPeopleOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Community Building</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Connect with neighbors and environmental enthusiasts through regular 
-              gatherings, skill-sharing sessions, and collaborative projects.
+            <h4 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Community Building</h4>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Opportunities to meet and connect with neighbors and fellow environmental enthusiasts.
             </p>
           </div>
 
           <div style={{
-            background: '#1E1B4B',
+            background: '#F8F9FA',
             border: '2px solid #F59E0B',
             borderRadius: '12px',
             padding: '1.5rem',
             textAlign: 'center'
           }}>
             <IoLeafOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#E8D5FF', marginBottom: '1rem' }}>Practical Skills</h3>
-            <p style={{ color: '#E8D5FF', opacity: 0.9 }}>
-              Learn actionable skills you can implement immediately, from home 
-              composting to community garden management and sustainable living practices.
+            <h4 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Practical Skills</h4>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Gain real-world skills that you can apply at home and in your community.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="documents-section" style={{ marginBottom: '3rem' }}>
+      <div className="event-resources-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Event Documentation
+          Event Resources
         </h3>
         
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-          gap: '1.5rem',
-          marginBottom: '3rem'
+          gap: '1.5rem'
         }}>
           {documents.map((doc, index) => (
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #6366F1',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 display: 'flex',
@@ -232,14 +211,14 @@ const EventsWorkshops = ({ onNavigate }) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#E8D5FF';
+                e.currentTarget.style.borderColor = '#6366F1';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <IoDocumentTextOutline size={40} color="#F59E0B" />
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
-                  color: '#E8D5FF', 
+                  color: '#1F2937', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '1.1rem',
                   fontWeight: '600'
@@ -247,8 +226,7 @@ const EventsWorkshops = ({ onNavigate }) => {
                   {doc.title}
                 </h4>
                 <p style={{ 
-                  color: '#E8D5FF', 
-                  opacity: 0.8,
+                  color: '#374151', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '0.9rem'
                 }}>
@@ -270,7 +248,7 @@ const EventsWorkshops = ({ onNavigate }) => {
 
       <div className="upcoming-events-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -280,87 +258,44 @@ const EventsWorkshops = ({ onNavigate }) => {
         </h3>
         
         <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-          gap: '1.5rem'
+          background: '#F8F9FA',
+          border: '2px solid #10B981',
+          borderRadius: '12px',
+          padding: '2rem',
+          textAlign: 'center'
         }}>
-          {upcomingEvents.map((event, index) => (
-            <div 
-              key={index}
-              style={{
-                background: '#1E1B4B',
-                border: '2px solid #10B981',
-                borderRadius: '12px',
-                padding: '1.5rem',
-                transition: 'all 0.3s ease',
-                cursor: 'pointer'
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#7C3AED';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#10B981';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                <IoTicketOutline size={24} color="#10B981" />
-                <span style={{ 
-                  color: '#10B981', 
-                  fontSize: '0.9rem',
-                  fontWeight: '600',
-                  textTransform: 'uppercase'
-                }}>
-                  {event.type}
-                </span>
-              </div>
-              
-              <h4 style={{ 
-                color: '#E8D5FF', 
-                margin: '0 0 1rem 0',
-                fontSize: '1.3rem',
-                fontWeight: '600'
-              }}>
-                {event.title}
-              </h4>
-              
-              <p style={{ 
-                color: '#E8D5FF', 
-                opacity: 0.9,
-                margin: '0 0 1rem 0',
-                fontSize: '1rem',
-                lineHeight: 1.5
-              }}>
-                {event.description}
-              </p>
-              
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoCalendarOutline size={16} color="#7C3AED" />
-                  <span style={{ color: '#E8D5FF', fontSize: '0.9rem' }}>{event.date}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoTimeOutline size={16} color="#7C3AED" />
-                  <span style={{ color: '#E8D5FF', fontSize: '0.9rem' }}>{event.time}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoLocationOutline size={16} color="#7C3AED" />
-                  <span style={{ color: '#E8D5FF', fontSize: '0.9rem' }}>{event.location}</span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoPeopleOutline size={16} color="#7C3AED" />
-                  <span style={{ color: '#E8D5FF', fontSize: '0.9rem' }}>{event.capacity}</span>
-                </div>
-              </div>
-            </div>
-          ))}
+          <IoCalendarOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
+          <h4 style={{ 
+            color: '#1F2937', 
+            fontSize: '1.5rem', 
+            marginBottom: '1rem',
+            fontWeight: '600'
+          }}>
+            New Events Coming Soon!
+          </h4>
+          <p style={{ 
+            color: '#374151', 
+            fontSize: '1.1rem',
+            lineHeight: 1.6,
+            marginBottom: '2rem'
+          }}>
+            We're planning exciting new workshops and community events. Stay tuned for 
+            announcements about upcoming sessions on composting, permaculture design, 
+            sustainable living practices, and more community initiatives.
+          </p>
+          <p style={{ 
+            color: '#374151', 
+            fontSize: '1rem',
+            marginBottom: '0'
+          }}>
+            Follow up with us to be notified when new events are scheduled!
+          </p>
         </div>
       </div>
 
       <div className="past-events-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
@@ -378,15 +313,14 @@ const EventsWorkshops = ({ onNavigate }) => {
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #8B5CF6',
                 borderRadius: '12px',
-                padding: '1.5rem',
-                opacity: 0.8
+                padding: '1.5rem'
               }}
             >
               <h4 style={{ 
-                color: '#E8D5FF', 
+                color: '#1F2937', 
                 margin: '0 0 0.5rem 0',
                 fontSize: '1.2rem',
                 fontWeight: '600'
@@ -394,28 +328,34 @@ const EventsWorkshops = ({ onNavigate }) => {
                 {event.title}
               </h4>
               <p style={{ 
-                color: '#E8D5FF', 
-                opacity: 0.8,
+                color: '#374151', 
                 margin: '0 0 1rem 0',
-                fontSize: '0.95rem'
+                fontSize: '0.95rem',
+                lineHeight: 1.5
               }}>
                 {event.description}
               </p>
               <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <span style={{ 
-                  color: '#7C3AED', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>
-                  {event.date}
-                </span>
-                <span style={{ 
-                  color: '#10B981', 
-                  fontSize: '0.9rem',
-                  fontWeight: '500'
-                }}>
-                  {event.attendees}
-                </span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <IoCalendarOutline size={16} color="#8B5CF6" />
+                  <span style={{ 
+                    color: '#8B5CF6', 
+                    fontSize: '0.9rem',
+                    fontWeight: '500'
+                  }}>
+                    {event.date}
+                  </span>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <IoPeopleOutline size={16} color="#10B981" />
+                  <span style={{ 
+                    color: '#10B981', 
+                    fontSize: '0.9rem',
+                    fontWeight: '500'
+                  }}>
+                    {event.participants} participants
+                  </span>
+                </div>
               </div>
             </div>
           ))}
@@ -423,57 +363,55 @@ const EventsWorkshops = ({ onNavigate }) => {
       </div>
 
       <div className="contact-section" style={{ 
-        background: '#1E1B4B',
-        border: '2px solid #7C3AED',
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
       }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '1.5rem', 
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Want to Join Our Events?
+          Stay Connected
         </h3>
         <p style={{ 
-          color: '#E8D5FF', 
-          marginBottom: '1.5rem',
-          opacity: 0.9
+          color: '#374151', 
+          marginBottom: '1.5rem'
         }}>
-          Stay updated on upcoming workshops and community events. We'd love to have you join us!
+          Want to be notified about upcoming events and workshops? Get in touch to join our mailing list!
         </p>
         
-        <button
-          onClick={handleEventInquiry}
+        <a
+          href="mailto:events@indigoregen.com.au?subject=Events & Workshops Interest"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#7C3AED',
+            color: '#6366F1',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(124, 58, 237, 0.1)',
+            background: 'rgba(99, 102, 241, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #7C3AED',
-            transition: 'all 0.3s ease',
-            cursor: 'pointer'
+            border: '2px solid #6366F1',
+            transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
-            e.target.style.color = '#E8D5FF';
+            e.currentTarget.style.background = '#6366F1';
+            e.currentTarget.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(124, 58, 237, 0.1)';
-            e.target.style.color = '#7C3AED';
+            e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+            e.currentTarget.style.color = '#6366F1';
           }}
         >
           <IoMailOutline size={24} />
           Contact Us About Events
-        </button>
+        </a>
       </div>
     </div>
   );

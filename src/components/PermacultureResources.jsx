@@ -49,8 +49,8 @@ const PermacultureResources = ({ onNavigate }) => {
           onClick={() => onNavigate && onNavigate('home')}
           style={{
             background: 'transparent',
-            color: '#7C3AED',
-            border: '2px solid #7C3AED',
+            color: '#6366F1',
+            border: '2px solid #6366F1',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
             cursor: 'pointer',
@@ -62,12 +62,12 @@ const PermacultureResources = ({ onNavigate }) => {
             gap: '0.5rem'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#7C3AED';
-            e.target.style.color = '#E8D5FF';
+            e.target.style.background = '#6366F1';
+            e.target.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
             e.target.style.background = 'transparent';
-            e.target.style.color = '#7C3AED';
+            e.target.style.color = '#6366F1';
           }}
         >
           <IoArrowBackOutline size={20} />
@@ -80,17 +80,16 @@ const PermacultureResources = ({ onNavigate }) => {
         marginBottom: '3rem' 
       }}>
         <h2 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2.5rem', 
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          🌻 Permaculture & Sustainability
+          🌻 Permaculture Resources
         </h2>
         <p style={{ 
-          color: '#E8D5FF', 
+          color: '#374151', 
           fontSize: '1.2rem', 
-          opacity: 0.9,
           lineHeight: 1.6,
           maxWidth: '800px',
           margin: '0 auto'
@@ -102,13 +101,13 @@ const PermacultureResources = ({ onNavigate }) => {
 
       <div className="documents-section" style={{ marginBottom: '3rem' }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '2rem', 
           marginBottom: '2rem',
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Available Resources
+          Documents & Guides
         </h3>
         
         <div style={{
@@ -120,8 +119,8 @@ const PermacultureResources = ({ onNavigate }) => {
             <div 
               key={index}
               style={{
-                background: '#1E1B4B',
-                border: '2px solid #E8D5FF',
+                background: '#F8F9FA',
+                border: '2px solid #6366F1',
                 borderRadius: '12px',
                 padding: '1.5rem',
                 display: 'flex',
@@ -136,14 +135,14 @@ const PermacultureResources = ({ onNavigate }) => {
                 e.currentTarget.style.transform = 'translateY(-2px)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#E8D5FF';
+                e.currentTarget.style.borderColor = '#6366F1';
                 e.currentTarget.style.transform = 'translateY(0)';
               }}
             >
               <IoDocumentTextOutline size={40} color="#84CC16" />
               <div style={{ flex: 1 }}>
                 <h4 style={{ 
-                  color: '#E8D5FF', 
+                  color: '#1F2937', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '1.1rem',
                   fontWeight: '600'
@@ -151,8 +150,7 @@ const PermacultureResources = ({ onNavigate }) => {
                   {doc.title}
                 </h4>
                 <p style={{ 
-                  color: '#E8D5FF', 
-                  opacity: 0.8,
+                  color: '#374151', 
                   margin: '0 0 0.5rem 0',
                   fontSize: '0.9rem'
                 }}>
@@ -174,7 +172,7 @@ const PermacultureResources = ({ onNavigate }) => {
 
       <div className="info-section" style={{ marginBottom: '3rem' }}>
         <div style={{
-          background: '#1E1B4B',
+          background: '#F8F9FA',
           border: '2px solid #84CC16',
           borderRadius: '12px',
           padding: '2rem',
@@ -182,7 +180,7 @@ const PermacultureResources = ({ onNavigate }) => {
         }}>
           <IoLeafOutline size={48} color="#84CC16" style={{ marginBottom: '1rem' }} />
           <h3 style={{ 
-            color: '#E8D5FF', 
+            color: '#1F2937', 
             fontSize: '1.8rem', 
             marginBottom: '1rem',
             fontWeight: '600'
@@ -190,9 +188,8 @@ const PermacultureResources = ({ onNavigate }) => {
             About Permaculture
           </h3>
           <p style={{ 
-            color: '#E8D5FF', 
+            color: '#374151', 
             marginBottom: '1rem',
-            opacity: 0.9,
             fontSize: '1.1rem',
             lineHeight: 1.6
           }}>
@@ -204,14 +201,14 @@ const PermacultureResources = ({ onNavigate }) => {
       </div>
 
       <div className="contact-section" style={{ 
-        background: '#1E1B4B',
-        border: '2px solid #84CC16',
+        background: '#F8F9FA',
+        border: '2px solid #6366F1',
         borderRadius: '12px',
         padding: '2rem',
         textAlign: 'center'
       }}>
         <h3 style={{ 
-          color: '#E8D5FF', 
+          color: '#1F2937', 
           fontSize: '1.5rem', 
           marginBottom: '1rem',
           fontWeight: '600'
@@ -219,9 +216,8 @@ const PermacultureResources = ({ onNavigate }) => {
           Want to Learn More?
         </h3>
         <p style={{ 
-          color: '#E8D5FF', 
-          marginBottom: '1.5rem',
-          opacity: 0.9
+          color: '#374151', 
+          marginBottom: '1.5rem'
         }}>
           Interested in permaculture workshops or sustainable living practices? Get in touch!
         </p>
@@ -232,23 +228,23 @@ const PermacultureResources = ({ onNavigate }) => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
-            color: '#84CC16',
+            color: '#6366F1',
             textDecoration: 'none',
             fontSize: '1.1rem',
             fontWeight: '500',
-            background: 'rgba(132, 204, 22, 0.1)',
+            background: 'rgba(99, 102, 241, 0.1)',
             padding: '0.75rem 1.5rem',
             borderRadius: '8px',
-            border: '2px solid #84CC16',
+            border: '2px solid #6366F1',
             transition: 'all 0.3s ease'
           }}
           onMouseEnter={(e) => {
-            e.target.style.background = '#84CC16';
-            e.target.style.color = '#E8D5FF';
+            e.currentTarget.style.background = '#6366F1';
+            e.currentTarget.style.color = '#FFFFFF';
           }}
           onMouseLeave={(e) => {
-            e.target.style.background = 'rgba(132, 204, 22, 0.1)';
-            e.target.style.color = '#84CC16';
+            e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
+            e.currentTarget.style.color = '#6366F1';
           }}
         >
           <IoMailOutline size={24} />
