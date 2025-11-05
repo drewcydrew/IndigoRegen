@@ -651,58 +651,6 @@ const CoolSeats = ({ onNavigate }) => {
           ))}
         </div>
       </div>
-
-      <div className="contact-section" style={{ 
-        background: '#F8F9FA',
-        border: '2px solid #6366F1',
-        borderRadius: '12px',
-        padding: '2rem',
-        textAlign: 'center'
-      }}>
-        <h3 style={{ 
-          color: '#1F2937', 
-          fontSize: '1.5rem', 
-          marginBottom: '1rem',
-          fontWeight: '600'
-        }}>
-          Want Cool Seats in Your Community?
-        </h3>
-        <p style={{ 
-          color: '#374151', 
-          marginBottom: '1.5rem'
-        }}>
-          Interested in installing Cool Seats in your local area? We'd love to help you get started!
-        </p>
-        
-        <a 
-          href="mailto:coolseats@indigoregen.com.au?subject=Cool Seats Installation Inquiry"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            color: '#6366F1',
-            textDecoration: 'none',
-            fontSize: '1.1rem',
-            fontWeight: '500',
-            background: 'rgba(99, 102, 241, 0.1)',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '8px',
-            border: '2px solid #6366F1',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#6366F1';
-            e.currentTarget.style.color = '#FFFFFF';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(99, 102, 241, 0.1)';
-            e.currentTarget.style.color = '#6366F1';
-          }}
-        >
-          <IoMailOutline size={24} />
-          Contact Us About Cool Seats
-        </a>
-      </div>
     </div>
   );
 };

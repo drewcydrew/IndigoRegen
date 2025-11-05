@@ -209,58 +209,6 @@ const Composting = ({ onNavigate }) => {
           </div>
         </div>
       </div>
-
-      <div className="contact-section" style={{ 
-        background: '#F8F9FA',
-        border: '2px solid #10B981',
-        borderRadius: '12px',
-        padding: '2rem',
-        textAlign: 'center'
-      }}>
-        <h3 style={{ 
-          color: '#1F2937', 
-          fontSize: '1.5rem', 
-          marginBottom: '1rem',
-          fontWeight: '600'
-        }}>
-          Join Our Composting Community
-        </h3>
-        <p style={{ 
-          color: '#374151', 
-          marginBottom: '1.5rem'
-        }}>
-          Interested in starting or joining a composting program? We'd love to help you get started!
-        </p>
-        
-        <a 
-          href="mailto:composting@indigoregen.com.au?subject=Composting Program Inquiry"
-          style={{
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem',
-            color: '#10B981',
-            textDecoration: 'none',
-            fontSize: '1.1rem',
-            fontWeight: '500',
-            background: 'rgba(16, 185, 129, 0.1)',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '8px',
-            border: '2px solid #10B981',
-            transition: 'all 0.3s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background = '#10B981';
-            e.currentTarget.style.color = '#FFFFFF';
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background = 'rgba(16, 185, 129, 0.1)';
-            e.currentTarget.style.color = '#10B981';
-          }}
-        >
-          <IoMailOutline size={24} />
-          Contact Us About Composting
-        </a>
-      </div>
     </div>
   );
 };
