@@ -44,57 +44,10 @@ const PermacultureResources = ({ onNavigate }) => {
       maxWidth: '1200px',
       margin: '0 auto'
     }}>
-      <div style={{ marginBottom: '2rem', textAlign: 'center' }}>
-        <button
-          onClick={() => onNavigate && onNavigate('home')}
-          style={{
-            background: 'transparent',
-            color: '#6366F1',
-            border: '2px solid #6366F1',
-            padding: '0.75rem 1.5rem',
-            borderRadius: '8px',
-            cursor: 'pointer',
-            fontSize: '1rem',
-            fontWeight: '500',
-            transition: 'all 0.3s ease',
-            display: 'inline-flex',
-            alignItems: 'center',
-            gap: '0.5rem'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.background = '#6366F1';
-            e.target.style.color = '#FFFFFF';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.background = 'transparent';
-            e.target.style.color = '#6366F1';
-          }}
-        >
-          <IoArrowBackOutline size={20} />
-          Back to Home
-        </button>
-      </div>
-
       <div className="intro-section" style={{ 
         textAlign: 'center', 
         marginBottom: '3rem' 
       }}>
-        <h2 style={{ 
-          color: '#1F2937', 
-          fontSize: '2.5rem', 
-          marginBottom: '1rem',
-          fontWeight: '700'
-        }}>
-          Permaculture and Sustainability
-        </h2>
-        <h3 style={{ 
-          color: '#1F2937', 
-          fontSize: '1.8rem', 
-          marginBottom: '1rem',
-          fontWeight: '600'
-        }}>
-          Permaculture Resources
-        </h3>
         <p style={{ 
           color: '#374151', 
           fontSize: '1.2rem', 
