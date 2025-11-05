@@ -78,7 +78,7 @@ function App() {
     { id: 'game', label: 'Play The Adaption Game' },
     { id: 'permaculture', label: 'Permaculture' },
     { id: 'coolseats', label: 'Cool Seats' },
-    { id: 'plantbased', label: '100 Cafes Campaign / Plant Based Treaty' },
+    { id: 'plantbased', label: 'Plant Based Treaty' },
     { id: 'events', label: 'Events' },
     { id: 'membership', label: 'Membership' }
   ]
@@ -91,7 +91,7 @@ function App() {
       case 'events': return 'Events & Workshops'
       case 'coolseats': return 'Cool Seats'
       case 'permaculture': return 'Permaculture & Sustainability'
-      case 'plantbased': return '100 Cafes Campaign / Plant Based Treaty'
+      case 'plantbased': return 'Plant Based Treaty'
       case 'membership': return 'Membership'
       case 'game': return 'Play The Adaption Game'
       default: return 'Indigo Regen'
@@ -139,10 +139,10 @@ function App() {
             {tabItems.map((tab) => (
               <button
                 key={tab.id}
-                className={`side-nav-item ${activeTab === tab.id ? 'active' : ''}`}
+                className={`side-nav-item ${activeTab === tab.id ? 'active' : ''} ${tab.id === 'home' ? 'home-nav-item' : ''}`}
                 onClick={() => handleTabChange(tab.id)}
               >
-                {tab.label}
+                {tab.id === 'home' ? '🏠 Home' : tab.label}
               </button>
             ))}
           </div>

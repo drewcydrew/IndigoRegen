@@ -191,58 +191,105 @@ const EventsWorkshops = ({ onNavigate }) => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '1.5rem'
         }}>
-          {documents.map((doc, index) => (
-            <div 
-              key={index}
-              style={{
-                background: '#F8F9FA',
-                border: '2px solid #6366F1',
-                borderRadius: '12px',
-                padding: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-              onClick={() => handleDownload(doc.filename)}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#F59E0B';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#6366F1';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <IoDocumentTextOutline size={40} color="#F59E0B" />
-              <div style={{ flex: 1 }}>
-                <h4 style={{ 
-                  color: '#1F2937', 
-                  margin: '0 0 0.5rem 0',
-                  fontSize: '1.1rem',
-                  fontWeight: '600'
-                }}>
-                  {doc.title}
-                </h4>
-                <p style={{ 
-                  color: '#374151', 
-                  margin: '0 0 0.5rem 0',
-                  fontSize: '0.9rem'
-                }}>
-                  {doc.description}
-                </p>
-                <span style={{ 
-                  color: '#F59E0B', 
-                  fontSize: '0.8rem',
-                  fontWeight: '500'
-                }}>
-                  {doc.size}
-                </span>
-              </div>
-              <IoDownloadOutline size={24} color="#F59E0B" />
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onClick={() => handleDownload("summit of food waste 2025 May.pdf")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#F59E0B';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <IoDocumentTextOutline size={40} color="#F59E0B" />
+            <div style={{ flex: 1 }}>
+              <h4 style={{ 
+                color: '#1F2937', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '1.1rem',
+                fontWeight: '600'
+              }}>
+                Summit of Food Waste 2025 May - Michael Mobbs
+              </h4>
+              <p style={{ 
+                color: '#374151', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '0.9rem'
+              }}>
+                Documentation and findings from the Food Waste Summit featuring Michael Mobbs
+              </p>
+              <span style={{ 
+                color: '#F59E0B', 
+                fontSize: '0.8rem',
+                fontWeight: '500'
+              }}>
+                3.4 MB
+              </span>
             </div>
-          ))}
+            <IoDownloadOutline size={24} color="#F59E0B" />
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onClick={() => handleDownload("summit of food waste 2025 May (1).pdf")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#F59E0B';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <IoDocumentTextOutline size={40} color="#F59E0B" />
+            <div style={{ flex: 1 }}>
+              <h4 style={{ 
+                color: '#1F2937', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '1.1rem',
+                fontWeight: '600'
+              }}>
+                Summit of Food Waste 2025 May (Alt)
+              </h4>
+              <p style={{ 
+                color: '#374151', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '0.9rem'
+              }}>
+                Alternative documentation from the Food Waste Summit
+              </p>
+              <span style={{ 
+                color: '#F59E0B', 
+                fontSize: '0.8rem',
+                fontWeight: '500'
+              }}>
+                3.4 MB
+              </span>
+            </div>
+            <IoDownloadOutline size={24} color="#F59E0B" />
+          </div>
         </div>
       </div>
 
@@ -309,56 +356,85 @@ const EventsWorkshops = ({ onNavigate }) => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '1.5rem'
         }}>
-          {pastEvents.map((event, index) => (
-            <div 
-              key={index}
-              style={{
-                background: '#F8F9FA',
-                border: '2px solid #8B5CF6',
-                borderRadius: '12px',
-                padding: '1.5rem'
-              }}
-            >
-              <h4 style={{ 
-                color: '#1F2937', 
-                margin: '0 0 0.5rem 0',
-                fontSize: '1.2rem',
-                fontWeight: '600'
-              }}>
-                {event.title}
-              </h4>
-              <p style={{ 
-                color: '#374151', 
-                margin: '0 0 1rem 0',
-                fontSize: '0.95rem',
-                lineHeight: 1.5
-              }}>
-                {event.description}
-              </p>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoCalendarOutline size={16} color="#8B5CF6" />
-                  <span style={{ 
-                    color: '#8B5CF6', 
-                    fontSize: '0.9rem',
-                    fontWeight: '500'
-                  }}>
-                    {event.date}
-                  </span>
-                </div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <IoPeopleOutline size={16} color="#10B981" />
-                  <span style={{ 
-                    color: '#10B981', 
-                    fontSize: '0.9rem',
-                    fontWeight: '500'
-                  }}>
-                    {event.participants} participants
-                  </span>
-                </div>
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #8B5CF6',
+              borderRadius: '12px',
+              padding: '1.5rem'
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 0.5rem 0',
+              fontSize: '1.2rem',
+              fontWeight: '600'
+            }}>
+              Cool Seats Installation Workshop
+            </h4>
+            <div style={{ marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <IoCalendarOutline size={16} color="#8B5CF6" />
+                <span style={{ 
+                  color: '#8B5CF6', 
+                  fontSize: '0.9rem',
+                  fontWeight: '500'
+                }}>
+                  Date: June 20, 2025
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <IoPeopleOutline size={16} color="#10B981" />
+                <span style={{ 
+                  color: '#10B981', 
+                  fontSize: '0.9rem',
+                  fontWeight: '500'
+                }}>
+                  Participants: 18
+                </span>
               </div>
             </div>
-          ))}
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #8B5CF6',
+              borderRadius: '12px',
+              padding: '1.5rem'
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 0.5rem 0',
+              fontSize: '1.2rem',
+              fontWeight: '600'
+            }}>
+              Regenerative Agriculture Talk
+            </h4>
+            <div style={{ marginBottom: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <IoCalendarOutline size={16} color="#8B5CF6" />
+                <span style={{ 
+                  color: '#8B5CF6', 
+                  fontSize: '0.9rem',
+                  fontWeight: '500'
+                }}>
+                  Date: May 15, 2025
+                </span>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <IoPeopleOutline size={16} color="#10B981" />
+                <span style={{ 
+                  color: '#10B981', 
+                  fontSize: '0.9rem',
+                  fontWeight: '500'
+                }}>
+                  Participants: 35
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

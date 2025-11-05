@@ -56,7 +56,7 @@ const AdaptionGame = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          🎮 Play The Adaption Game
+          Play the Adaption Game
         </h2>
         <p style={{ 
           color: '#374151', 
@@ -87,7 +87,7 @@ const AdaptionGame = ({ onNavigate }) => {
             marginBottom: '1rem',
             fontWeight: '600'
           }}>
-            TAG Climate Drill
+            Tag Climate Drill
           </h3>
           <p style={{ 
             color: '#374151', 
@@ -96,8 +96,8 @@ const AdaptionGame = ({ onNavigate }) => {
             marginBottom: '2rem'
           }}>
             Experience interactive climate adaptation scenarios through the TAG Climate Drill. 
-            This engaging platform helps communities and organizations prepare for climate 
-            challenges through simulation exercises and collaborative problem-solving.
+            This engaging platform helps communities and organisations prepare for climate 
+            challenges through simulation exercises and collaborative problem solving.
           </p>
           
           <a 
@@ -133,122 +133,6 @@ const AdaptionGame = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* Future Game Section */}
-      <div className="future-game-section" style={{ marginBottom: '3rem' }}>
-        <div style={{
-          background: '#F8F9FA',
-          border: '2px solid #F59E0B',
-          borderRadius: '12px',
-          padding: '2rem',
-          textAlign: 'center'
-        }}>
-          <IoGameControllerOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-          <h3 style={{ 
-            color: '#1F2937', 
-            fontSize: '2rem', 
-            marginBottom: '1rem',
-            fontWeight: '600'
-          }}>
-            Our Adaption Game - Coming Soon
-          </h3>
-          <p style={{ 
-            color: '#374151', 
-            fontSize: '1.1rem',
-            lineHeight: 1.6,
-            marginBottom: '2rem'
-          }}>
-            We're developing our own interactive learning game focused on regenerative practices 
-            and community resilience. This game will help players understand local environmental 
-            challenges and solutions specific to our region.
-          </p>
-          
-          <div style={{
-            background: 'rgba(245, 158, 11, 0.1)',
-            border: '1px solid #F59E0B',
-            borderRadius: '8px',
-            padding: '1.5rem',
-            marginBottom: '2rem'
-          }}>
-            <h4 style={{ 
-              color: '#1F2937', 
-              fontSize: '1.3rem', 
-              marginBottom: '1rem',
-              fontWeight: '600'
-            }}>
-              What to Expect
-            </h4>
-            <div style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-              gap: '1rem',
-              textAlign: 'left'
-            }}>
-              <div>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Local climate scenarios
-                </p>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Community garden management
-                </p>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Composting challenges
-                </p>
-              </div>
-              <div>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Sustainable living tips
-                </p>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Resource sharing networks
-                </p>
-                <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '0.95rem' }}>
-                  • Real-world impact tracking
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Educational Features */}
-      <div className="features-section" style={{ marginBottom: '3rem' }}>
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '2rem'
-        }}>
-          <div style={{
-            background: '#F8F9FA',
-            border: '2px solid #6366F1',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoSchoolOutline size={48} color="#6366F1" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Interactive Learning</h3>
-            <p style={{ color: '#374151', margin: 0 }}>
-              Learn through hands-on scenarios that mirror real-world environmental 
-              challenges and community-based solutions.
-            </p>
-          </div>
-
-          <div style={{
-            background: '#F8F9FA',
-            border: '2px solid #8B5CF6',
-            borderRadius: '12px',
-            padding: '1.5rem',
-            textAlign: 'center'
-          }}>
-            <IoGlobeOutline size={48} color="#8B5CF6" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Community Focus</h3>
-            <p style={{ color: '#374151', margin: 0 }}>
-              Games designed around community resilience, local resource management, 
-              and collaborative environmental stewardship.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div className="contact-section" style={{ 
         background: '#F8F9FA',
         border: '2px solid #6366F1',
@@ -262,17 +146,17 @@ const AdaptionGame = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          Stay Updated
+          Want to Learn More?
         </h3>
         <p style={{ 
           color: '#374151', 
           marginBottom: '1.5rem'
         }}>
-          Want to be notified when our game launches or learn about other climate adaptation resources?
+          Interested in climate adaptation resources or other educational gaming experiences?
         </p>
         
         <a 
-          href="mailto:game@indigoregen.com.au?subject=Adaption Game Updates"
+          href="mailto:game@indigoregen.com.au?subject=Climate Adaptation Gaming Inquiry"
           style={{
             display: 'inline-flex',
             alignItems: 'center',
@@ -297,7 +181,7 @@ const AdaptionGame = ({ onNavigate }) => {
           }}
         >
           <IoMailOutline size={24} />
-          Get Updates
+          Contact Us
         </a>
       </div>
     </div>

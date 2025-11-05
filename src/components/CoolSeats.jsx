@@ -114,7 +114,7 @@ const CoolSeats = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          Cool Seats Project
+          Cool Seats
         </h2>
         <p style={{ 
           color: '#374151', 
@@ -155,7 +155,7 @@ const CoolSeats = ({ onNavigate }) => {
           }}
         >
           <IoLinkOutline size={24} />
-          Visit coolseats.com.au
+          https://www.coolseats.com.au
         </a>
       </div>
 
@@ -227,7 +227,7 @@ const CoolSeats = ({ onNavigate }) => {
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Our Cool Seats Sites
+          Our Cool Seat Sites
         </h3>
         
         <div style={{
@@ -235,113 +235,349 @@ const CoolSeats = ({ onNavigate }) => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
           gap: '2rem'
         }}>
-          {coolSeatsSites.map((site, index) => (
-            <div 
-              key={index}
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#4F46E5';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 1rem 0',
+              fontSize: '1.3rem',
+              fontWeight: '600'
+            }}>
+              Quercus community garden
+            </h4>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+              <IoLocationOutline size={16} color="#6366F1" />
+              <span style={{ color: '#374151', fontSize: '0.9rem' }}>
+                Beechworth
+              </span>
+            </div>
+            
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a 
+                href="mailto:coolseats@indigoregen.com.au?subject=Interest in Cool Seats at Quercus community garden"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#6366F1',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #6366F1',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#6366F1';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#6366F1';
+                }}
+              >
+                <IoMailOutline size={16} />
+                Get Involved
+              </a>
+              
+              <a 
+                href="https://quercusbeechworth.org.au/community-garden"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#10B981',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #10B981',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#10B981';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#10B981';
+                }}
+              >
+                <IoLinkOutline size={16} />
+                Visit Site
+              </a>
+            </div>
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#4F46E5';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 1rem 0',
+              fontSize: '1.3rem',
+              fontWeight: '600'
+            }}>
+              Beechworth Community Early Years Learning Centre
+            </h4>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+              <IoLocationOutline size={16} color="#6366F1" />
+              <span style={{ color: '#374151', fontSize: '0.9rem' }}>
+                Beechworth
+              </span>
+            </div>
+            
+            <a 
+              href="mailto:coolseats@indigoregen.com.au?subject=Interest in Cool Seats at Beechworth Community Early Years Learning Centre"
               style={{
-                background: '#F8F9FA',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: '0.5rem',
+                color: '#6366F1',
+                textDecoration: 'none',
+                fontSize: '0.9rem',
+                fontWeight: '500',
+                padding: '0.5rem 1rem',
                 border: '2px solid #6366F1',
-                borderRadius: '12px',
-                padding: '1.5rem',
+                borderRadius: '6px',
                 transition: 'all 0.3s ease'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#4F46E5';
-                e.currentTarget.style.transform = 'translateY(-2px)';
+                e.currentTarget.style.background = '#6366F1';
+                e.currentTarget.style.color = '#FFFFFF';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#6366F1';
-                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.background = 'transparent';
+                e.currentTarget.style.color = '#6366F1';
               }}
             >
-              <h4 style={{ 
-                color: '#1F2937', 
-                margin: '0 0 1rem 0',
-                fontSize: '1.3rem',
-                fontWeight: '600'
-              }}>
-                {site.name}
-              </h4>
-              
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
-                <IoLocationOutline size={16} color="#6366F1" />
-                <span style={{ color: '#374151', fontSize: '0.9rem' }}>
-                  {site.location}
-                </span>
-              </div>
-              
-              <p style={{ 
-                color: '#374151', 
-                margin: '0 0 1.5rem 0',
-                fontSize: '1rem',
-                lineHeight: 1.5
-              }}>
-                {site.description}
-              </p>
-              
-              <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
-                <a 
-                  href={`mailto:${site.contact}?subject=Interest in Cool Seats at ${site.name}`}
-                  style={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: '0.5rem',
-                    color: '#6366F1',
-                    textDecoration: 'none',
-                    fontSize: '0.9rem',
-                    fontWeight: '500',
-                    padding: '0.5rem 1rem',
-                    border: '2px solid #6366F1',
-                    borderRadius: '6px',
-                    transition: 'all 0.3s ease'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.background = '#6366F1';
-                    e.currentTarget.style.color = '#FFFFFF';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.background = 'transparent';
-                    e.currentTarget.style.color = '#6366F1';
-                  }}
-                >
-                  <IoMailOutline size={16} />
-                  Get Involved
-                </a>
-                
-                {site.website && (
-                  <a 
-                    href={site.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '0.5rem',
-                      color: '#10B981',
-                      textDecoration: 'none',
-                      fontSize: '0.9rem',
-                      fontWeight: '500',
-                      padding: '0.5rem 1rem',
-                      border: '2px solid #10B981',
-                      borderRadius: '6px',
-                      transition: 'all 0.3s ease'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.background = '#10B981';
-                      e.currentTarget.style.color = '#FFFFFF';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.background = 'transparent';
-                      e.currentTarget.style.color = '#10B981';
-                    }}
-                  >
-                    <IoLinkOutline size={16} />
-                    Visit Site
-                  </a>
-                )}
-              </div>
+              <IoMailOutline size={16} />
+              Get Involved
+            </a>
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#4F46E5';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 1rem 0',
+              fontSize: '1.3rem',
+              fontWeight: '600'
+            }}>
+              Montessori Beechworth
+            </h4>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+              <IoLocationOutline size={16} color="#6366F1" />
+              <span style={{ color: '#374151', fontSize: '0.9rem' }}>
+                Beechworth
+              </span>
             </div>
-          ))}
+            
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a 
+                href="mailto:coolseats@indigoregen.com.au?subject=Interest in Cool Seats at Montessori Beechworth"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#6366F1',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #6366F1',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#6366F1';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#6366F1';
+                }}
+              >
+                <IoMailOutline size={16} />
+                Get Involved
+              </a>
+              
+              <a 
+                href="https://www.beechworthmontessori.vic.edu.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#10B981',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #10B981',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#10B981';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#10B981';
+                }}
+              >
+                <IoLinkOutline size={16} />
+                Visit Site
+              </a>
+            </div>
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              transition: 'all 0.3s ease'
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#4F46E5';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <h4 style={{ 
+              color: '#1F2937', 
+              margin: '0 0 1rem 0',
+              fontSize: '1.3rem',
+              fontWeight: '600'
+            }}>
+              Old Beechworth Gaol
+            </h4>
+            
+            <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+              <IoLocationOutline size={16} color="#6366F1" />
+              <span style={{ color: '#374151', fontSize: '0.9rem' }}>
+                Beechworth Historic Precinct
+              </span>
+            </div>
+            
+            <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+              <a 
+                href="mailto:coolseats@indigoregen.com.au?subject=Interest in Cool Seats at Old Beechworth Gaol"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#6366F1',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #6366F1',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#6366F1';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#6366F1';
+                }}
+              >
+                <IoMailOutline size={16} />
+                Get Involved
+              </a>
+              
+              <a 
+                href="https://www.theobg.com.au"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '0.5rem',
+                  color: '#10B981',
+                  textDecoration: 'none',
+                  fontSize: '0.9rem',
+                  fontWeight: '500',
+                  padding: '0.5rem 1rem',
+                  border: '2px solid #10B981',
+                  borderRadius: '6px',
+                  transition: 'all 0.3s ease'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#10B981';
+                  e.currentTarget.style.color = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = 'transparent';
+                  e.currentTarget.style.color = '#10B981';
+                }}
+              >
+                <IoLinkOutline size={16} />
+                Visit Site
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 

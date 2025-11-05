@@ -85,8 +85,16 @@ const PermacultureResources = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '700'
         }}>
-          🌻 Permaculture Resources
+          Permaculture and Sustainability
         </h2>
+        <h3 style={{ 
+          color: '#1F2937', 
+          fontSize: '1.8rem', 
+          marginBottom: '1rem',
+          fontWeight: '600'
+        }}>
+          Permaculture Resources
+        </h3>
         <p style={{ 
           color: '#374151', 
           fontSize: '1.2rem', 
@@ -107,7 +115,7 @@ const PermacultureResources = ({ onNavigate }) => {
           textAlign: 'center',
           fontWeight: '600'
         }}>
-          Documents & Guides
+          Documents and guides
         </h3>
         
         <div style={{
@@ -115,58 +123,105 @@ const PermacultureResources = ({ onNavigate }) => {
           gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
           gap: '1.5rem'
         }}>
-          {documents.map((doc, index) => (
-            <div 
-              key={index}
-              style={{
-                background: '#F8F9FA',
-                border: '2px solid #6366F1',
-                borderRadius: '12px',
-                padding: '1.5rem',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '1rem',
-                cursor: 'pointer',
-                transition: 'all 0.3s ease'
-              }}
-              onClick={() => handleDownload(doc.filename)}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.borderColor = '#84CC16';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.borderColor = '#6366F1';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              <IoDocumentTextOutline size={40} color="#84CC16" />
-              <div style={{ flex: 1 }}>
-                <h4 style={{ 
-                  color: '#1F2937', 
-                  margin: '0 0 0.5rem 0',
-                  fontSize: '1.1rem',
-                  fontWeight: '600'
-                }}>
-                  {doc.title}
-                </h4>
-                <p style={{ 
-                  color: '#374151', 
-                  margin: '0 0 0.5rem 0',
-                  fontSize: '0.9rem'
-                }}>
-                  {doc.description}
-                </p>
-                <span style={{ 
-                  color: '#84CC16', 
-                  fontSize: '0.8rem',
-                  fontWeight: '500'
-                }}>
-                  {doc.size}
-                </span>
-              </div>
-              <IoDownloadOutline size={24} color="#84CC16" />
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onClick={() => handleDownload("Getting-Started-with-Permaculture-Living-Milkwood.pdf")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#84CC16';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <IoDocumentTextOutline size={40} color="#84CC16" />
+            <div style={{ flex: 1 }}>
+              <h4 style={{ 
+                color: '#1F2937', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '1.1rem',
+                fontWeight: '600'
+              }}>
+                Getting started with permaculture
+              </h4>
+              <p style={{ 
+                color: '#374151', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '0.9rem'
+              }}>
+                Comprehensive guide to permaculture principles and practices for sustainable living
+              </p>
+              <span style={{ 
+                color: '#84CC16', 
+                fontSize: '0.8rem',
+                fontWeight: '500'
+              }}>
+                3.2 MB
+              </span>
             </div>
-          ))}
+            <IoDownloadOutline size={24} color="#84CC16" />
+          </div>
+
+          <div 
+            style={{
+              background: '#F8F9FA',
+              border: '2px solid #6366F1',
+              borderRadius: '12px',
+              padding: '1.5rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onClick={() => handleDownload("bintrim-cafes-restaurants-factsheet-160773.pdf")}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = '#84CC16';
+              e.currentTarget.style.transform = 'translateY(-2px)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = '#6366F1';
+              e.currentTarget.style.transform = 'translateY(0)';
+            }}
+          >
+            <IoDocumentTextOutline size={40} color="#84CC16" />
+            <div style={{ flex: 1 }}>
+              <h4 style={{ 
+                color: '#1F2937', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '1.1rem',
+                fontWeight: '600'
+              }}>
+                Bintrim Cafes & Restaurants Factsheet
+              </h4>
+              <p style={{ 
+                color: '#374151', 
+                margin: '0 0 0.5rem 0',
+                fontSize: '0.9rem'
+              }}>
+                Resource guide for implementing sustainable practices in food service businesses
+              </p>
+              <span style={{ 
+                color: '#84CC16', 
+                fontSize: '0.8rem',
+                fontWeight: '500'
+              }}>
+                1.8 MB
+              </span>
+            </div>
+            <IoDownloadOutline size={24} color="#84CC16" />
+          </div>
         </div>
       </div>
 
@@ -194,8 +249,7 @@ const PermacultureResources = ({ onNavigate }) => {
             lineHeight: 1.6
           }}>
             Permaculture is a design philosophy that works with natural systems to create 
-            sustainable and self-sufficient human habitats. These resources will help you 
-            understand and implement permaculture principles in your home, garden, and community.
+            sustainable and self sufficient human habitats.
           </p>
         </div>
       </div>

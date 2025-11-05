@@ -62,11 +62,34 @@ const Composting = ({ onNavigate }) => {
           fontSize: '1.2rem', 
           lineHeight: 1.6,
           maxWidth: '800px',
-          margin: '0 auto'
+          margin: '0 auto 1.5rem auto'
         }}>
           Learn about our community composting initiatives and how you can reduce 
           food waste while creating valuable soil amendments for local gardens and 
           regenerative agriculture projects.
+        </p>
+        <p style={{ 
+          color: '#374151', 
+          fontSize: '1.1rem', 
+          lineHeight: 1.6,
+          maxWidth: '800px',
+          margin: '0 auto'
+        }}>
+          See our <button 
+            onClick={() => onNavigate && onNavigate('coolseats')}
+            style={{
+              background: 'transparent',
+              color: '#9333EA',
+              border: 'none',
+              textDecoration: 'underline',
+              cursor: 'pointer',
+              fontSize: '1.1rem',
+              fontWeight: '500',
+              padding: 0
+            }}
+          >
+            Cool Seats
+          </button> also!
         </p>
       </div>
 
@@ -84,9 +107,9 @@ const Composting = ({ onNavigate }) => {
             textAlign: 'center'
           }}>
             <IoRefreshOutline size={48} color="#10B981" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#1F2937', marginBottom: '1rem' }}>Community Composting</h3>
-            <p style={{ color: '#374151' }}>
-              Join our neighborhood composting hubs where organic waste is transformed 
+            <h3 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Community Composting</h3>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Join our neighbourhood composting hubs where organic waste is transformed 
               into rich compost for community gardens and local food production.
             </p>
           </div>
@@ -99,10 +122,10 @@ const Composting = ({ onNavigate }) => {
             textAlign: 'center'
           }}>
             <IoLeafOutline size={48} color="#F59E0B" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#1F2937', marginBottom: '1rem' }}>Home Composting</h3>
-            <p style={{ color: '#374151' }}>
-              Learn techniques for backyard composting, vermicomposting, and small-space 
-              solutions that work for apartments and urban settings.
+            <h3 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Home Composting</h3>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Learn techniques for backyard composting and small space solutions that 
+              work for apartments and urban settings.
             </p>
           </div>
 
@@ -114,9 +137,9 @@ const Composting = ({ onNavigate }) => {
             textAlign: 'center'
           }}>
             <IoNutritionOutline size={48} color="#8B5CF6" style={{ marginBottom: '1rem' }} />
-            <h3 style={{ color: '#1F2937', marginBottom: '1rem' }}>Soil Health</h3>
-            <p style={{ color: '#374151' }}>
-              Discover how composting improves soil health, increases biodiversity, 
+            <h3 style={{ color: '#1F2937', marginBottom: '1rem', fontSize: '1.3rem' }}>Soil Health</h3>
+            <p style={{ color: '#374151', margin: 0, fontSize: '1rem', lineHeight: 1.5 }}>
+              Discover how composting improves soil health, increases biodiversity 
               and supports regenerative farming practices in our local ecosystem.
             </p>
           </div>
@@ -137,7 +160,7 @@ const Composting = ({ onNavigate }) => {
           marginBottom: '1rem',
           fontWeight: '600'
         }}>
-          More Content Coming Soon
+          More content coming soon
         </h3>
         <p style={{ 
           color: '#374151', 
@@ -146,7 +169,14 @@ const Composting = ({ onNavigate }) => {
           marginBottom: '2rem'
         }}>
           We're developing comprehensive resources on composting techniques, 
-          community programs, and educational materials. Check back soon for:
+          community programs and educational materials.
+        </p>
+        <p style={{ 
+          color: '#374151', 
+          fontSize: '1rem',
+          marginBottom: '1.5rem'
+        }}>
+          Check back soon for:
         </p>
         <div style={{
           display: 'grid',
@@ -156,14 +186,26 @@ const Composting = ({ onNavigate }) => {
           textAlign: 'left'
         }}>
           <div>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Composting Guides</h4>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Workshop Schedules</h4>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Community Hub Locations</h4>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Composting guidelines
+            </p>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Workshop schedules
+            </p>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Community hub locations
+            </p>
           </div>
           <div>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Equipment Sharing</h4>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Troubleshooting Tips</h4>
-            <h4 style={{ color: '#1F2937', margin: '0 0 0.5rem 0' }}>• Success Stories</h4>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Equipment sharing
+            </p>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Troubleshooting tips
+            </p>
+            <p style={{ color: '#374151', margin: '0 0 0.5rem 0', fontSize: '1rem' }}>
+              • Success stories
+            </p>
           </div>
         </div>
       </div>
