@@ -1,119 +1,81 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom'
 import { IoMenuOutline, IoCloseOutline } from 'react-icons/io5'
-import MissionStatement from './components/MissionStatement'
 import Homepage from './components/Homepage'
 import EventsWorkshops from './components/EventsWorkshops'
 import CoolSeats from './components/CoolSeats'
 import CommunityGardens from './components/CommunityGardens'
 import PermacultureResources from './components/PermacultureResources'
 import PlantBasedTreaty from './components/PlantBasedTreaty'
-import IndigoRegenDocs from './components/IndigoRegenDocs'
 import Composting from './components/Composting'
 import Membership from './components/Membership'
 import AdaptionGame from './components/AdaptionGame'
 import './App.css'
 
 function App() {
-  const [missionAccepted, setMissionAccepted] = useState(false)
-  const [activeTab, setActiveTab] = useState('home')
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false)
-  
-  useEffect(() => {
-    // Check URL parameters on mount
-    const urlParams = new URLSearchParams(window.location.search)
-    const tab = urlParams.get('tab')
-    if (tab && ['home', 'events', 'coolseats', 'gardens', 'permaculture', 'plantbased', 'composting', 'membership', 'game'].includes(tab)) {
-      setActiveTab(tab)
-    }
-  }, [])
-
-  const handleAccept = () => {
-    setMissionAccepted(true)
-  }
-
-  const handleTabChange = (tab) => {
-    setActiveTab(tab)
-    setIsMobileNavOpen(false) // Close mobile nav when tab is selected
-    // Update URL parameter
-    const url = new URL(window.location)
-    url.searchParams.set('tab', tab)
-    window.history.pushState({}, '', url)
-  }
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const handleNavigate = (destination) => {
     switch(destination) {
       case 'coolseats':
-        handleTabChange('coolseats')
+        navigate('/coolseats')
         break
       case 'eventsworkshops':
-        handleTabChange('events')
+      case 'events':
+        navigate('/events')
         break
       case 'gardens':
-        handleTabChange('gardens')
+        navigate('/gardens')
         break
       case 'permaculture':
-        handleTabChange('permaculture')
+        navigate('/permaculture')
         break
       case 'plantbased':
-        handleTabChange('plantbased')
+        navigate('/plantbased')
         break
       case 'composting':
-        handleTabChange('composting')
+        navigate('/composting')
         break
       case 'membership':
-        handleTabChange('membership')
+        navigate('/membership')
         break
       case 'game':
-        handleTabChange('game')
+        navigate('/game')
         break
+      case 'home':
       default:
-        handleTabChange('home')
+        navigate('/')
     }
+    setIsMobileNavOpen(false)
   }
 
   const tabItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'composting', label: 'Composting' },
-    { id: 'gardens', label: 'Community Gardens' },
-    { id: 'game', label: 'Play The Adaption Game' },
-    { id: 'permaculture', label: 'Permaculture' },
-    { id: 'coolseats', label: 'Cool Seats' },
-    { id: 'plantbased', label: 'Plant Based Treaty' },
-    { id: 'events', label: 'Events' },
-    { id: 'membership', label: 'Membership' }
+    { id: '/', label: 'Home', path: '/' },
+    { id: '/composting', label: 'Composting', path: '/composting' },
+    { id: '/gardens', label: 'Community Gardens', path: '/gardens' },
+    { id: '/game', label: 'Play The Adaption Game', path: '/game' },
+    { id: '/permaculture', label: 'Permaculture', path: '/permaculture' },
+    { id: '/coolseats', label: 'Cool Seats', path: '/coolseats' },
+    { id: '/plantbased', label: 'Plant Based Treaty', path: '/plantbased' },
+    { id: '/events', label: 'Events', path: '/events' },
+    { id: '/membership', label: 'Membership', path: '/membership' }
   ]
 
   const getPageTitle = () => {
-    switch(activeTab) {
-      case 'home': return 'Indigo Regen'
-      case 'gardens': return 'Community Gardens'
-      case 'composting': return 'Composting Programs'
-      case 'events': return 'Events & Workshops'
-      case 'coolseats': return 'Cool Seats'
-      case 'permaculture': return 'Permaculture & Sustainability'
-      case 'plantbased': return 'Plant Based Treaty'
-      case 'membership': return 'Membership'
-      case 'game': return 'Play The Adaption Game'
+    switch(location.pathname) {
+      case '/': return 'Indigo Regen'
+      case '/gardens': return 'Community Gardens'
+      case '/composting': return 'Composting Programs'
+      case '/events': return 'Events & Workshops'
+      case '/coolseats': return 'Cool Seats'
+      case '/permaculture': return 'Permaculture & Sustainability'
+      case '/plantbased': return 'Plant Based Treaty'
+      case '/membership': return 'Membership'
+      case '/game': return 'Play The Adaption Game'
       default: return 'Indigo Regen'
     }
-  }
-
-  if (missionAccepted) {
-    return (
-      <div className="accepted-container">
-        <h1>Thank you!</h1>
-        <p>You have joined our mission for regenerative agriculture.</p>
-        <button 
-          className="tab-button" 
-          onClick={() => {
-            setMissionAccepted(false)
-            handleTabChange('home')
-          }}
-        >
-          Return to Home
-        </button>
-      </div>
-    )
   }
 
   return (
@@ -139,10 +101,13 @@ function App() {
             {tabItems.map((tab) => (
               <button
                 key={tab.id}
-                className={`side-nav-item ${activeTab === tab.id ? 'active' : ''} ${tab.id === 'home' ? 'home-nav-item' : ''}`}
-                onClick={() => handleTabChange(tab.id)}
+                className={`side-nav-item ${location.pathname === tab.path ? 'active' : ''} ${tab.path === '/' ? 'home-nav-item' : ''}`}
+                onClick={() => {
+                  navigate(tab.path)
+                  setIsMobileNavOpen(false)
+                }}
               >
-                {tab.id === 'home' ? '🏠 Home' : tab.label}
+                {tab.path === '/' ? '🏠 Home' : tab.label}
               </button>
             ))}
           </div>
@@ -171,27 +136,19 @@ function App() {
 
         <div className="scroll-content">
           <div className="content-container">
-            {activeTab === 'home' ? (
-              <Homepage onNavigate={handleNavigate} />
-            ) : activeTab === 'gardens' ? (
-              <CommunityGardens onNavigate={handleNavigate} />
-            ) : activeTab === 'composting' ? (
-              <Composting onNavigate={handleNavigate} />
-            ) : activeTab === 'events' ? (
-              <EventsWorkshops onNavigate={handleNavigate} />
-            ) : activeTab === 'coolseats' ? (
-              <CoolSeats onNavigate={handleNavigate} />
-            ) : activeTab === 'permaculture' ? (
-              <PermacultureResources onNavigate={handleNavigate} />
-            ) : activeTab === 'plantbased' ? (
-              <PlantBasedTreaty onNavigate={handleNavigate} />
-            ) : activeTab === 'membership' ? (
-              <Membership onNavigate={handleNavigate} />
-            ) : activeTab === 'game' ? (
-              <AdaptionGame onNavigate={handleNavigate} />
-            ) : (
-              <Homepage onNavigate={handleNavigate} />
-            )}
+            <Routes>
+              <Route path="/" element={<Homepage onNavigate={handleNavigate} />} />
+              <Route path="/gardens" element={<CommunityGardens onNavigate={handleNavigate} />} />
+              <Route path="/composting" element={<Composting onNavigate={handleNavigate} />} />
+              <Route path="/events" element={<EventsWorkshops onNavigate={handleNavigate} />} />
+              <Route path="/coolseats" element={<CoolSeats onNavigate={handleNavigate} />} />
+              <Route path="/permaculture" element={<PermacultureResources onNavigate={handleNavigate} />} />
+              <Route path="/plantbased" element={<PlantBasedTreaty onNavigate={handleNavigate} />} />
+              <Route path="/membership" element={<Membership onNavigate={handleNavigate} />} />
+              <Route path="/game" element={<AdaptionGame onNavigate={handleNavigate} />} />
+              {/* Catch all route - redirect to home */}
+              <Route path="*" element={<Homepage onNavigate={handleNavigate} />} />
+            </Routes>
           </div>
         </div>
       </div>

@@ -86,7 +86,7 @@ const Homepage = ({ onNavigate }) => {
       title: 'Events & Workshops',
       description: 'Join our yoga sessions, nature walks, skill-sharing workshops, and community celebrations.',
       color: '#F59E0B',
-      onClick: () => onNavigate && onNavigate('eventsworkshops')
+      onClick: () => onNavigate && onNavigate('events')
     },
     {
       icon: IoBookOutline,
